@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Collezione OST - FromSoftware</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- HEADER + NAVBAR -->
+    <header>
+
+        <div class="header-container">
+            <a href="index.html"><img src="IMG/Logo.png" width="200" height="100"></a>
+        </div>
+
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="index.html">Home</a>
+                <a class="active" href="collezione.html">Collezione</a>
+                <a href="#">Chi Siamo</a>
+            </div>
+            <div class="login-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="Password" name="psw">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </header>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Torna Su</button>
+
+    <!-- The overlay -->
+    <div id="myNav" class="sideOverlay">
+
+    <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+        <div class="overlay-content">
+            <div class="overlay-container">
+                <p class="filtraPer"> Cerca una OST</p>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Cerca una OST..." onkeyup="searchGames()">
+                    <button onclick="searchGames()"> <i class="material-icons">&#xe8b6;</i></button>
+                </div>
+
+                <p class="filtraPer"> Filtra per:</p>
+                <div class="filtriOverlay-container">
+                    <div class="filtriGioco">
+                        <label class="title">Gioco</label>
+                        <a href="#">Demon's Souls</a>
+                        <a href="#">Dark Soul I</a>
+                        <a href="#">Dark Soul II</a>
+                        <a href="#">Dark Soul III</a>
+                        <a href="#">Bloodborne</a>
+                        <a href="#">Sekiro: Shadows Die Twice</a>
+                        <a href="#">Elden Ring</a>
+                    </div>
+                    <div class="filtriGenere">
+                        <label class="title">Genere</label>
+                        <a href="#">Boss</a>
+                        <a href="#">Mappa</a>
+                        <a href="#">Dungeon</a>
+                        <a href="#">Title Screen</a>
+                        <a href="#">Endings</a>
+                        <a href="#">Cut Content</a>
+                    </div>               
+                    <div class="filtriPopolare">
+                        <label class="title">Comunity</label>
+                        <a href="#">Più Popolare</a>
+                        <a href="#">Meno Popolare</a>
+                        <a href="#">Più Ascoltato</a>
+                        <a href="#">Meno Ascoltato</a>
+                    </div>
+                </div>
+
+            </div> 
+         </div>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="HoverButton" class="sidenav">
+          <a href="#" id="Filtra"> <span onclick="openNav()">filtri</span>  <span> </span> <i class="material-icons">&#xe8b6;</i></a>
+    </div>
+    <main>
+        <h1 class="page-title">Collezione delle OST</h1>
+        <div class="collection-grid"> 
+            <div class="ost-item">
+                <a href="knightArtorias.html">
+                    <img src="IMG/Collection/artorias.jpg" alt="Artorias">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Knight Artorias</p>
+                    <p class="provenienza-ost"> Dark Souls I</p>
+                    <p class="provenienza-ost">Artorias, il Camminatore dell' Abisso</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/ash lake.jpg" alt="Ash Lake">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">The Ancient Dragon</p>
+                    <p class="provenienza-ost"> Dark Souls I</p>
+                    <p class="provenienza-ost">Lago di Cenere</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/fair lady.jpg" alt="Fair Lady, Daugher of Chaos">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Daughters of Chaos</p>
+                    <p class="provenienza-ost"> Dark Souls I</p>
+                    <p class="provenienza-ost">Figlia del Caos</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/gwyndolin.jpg" alt="Gwyndolin">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Dark Sun Gwyindolin</p>
+                    <p class="provenienza-ost"> Dark Souls I</p>
+                    <p class="provenienza-ost">Gwyndolin il Sole Oscuro</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/firelink ds1.jpg" alt="Firelink, Dark Souls I">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Firelink Shrine</p>
+                    <p class="provenienza-ost"> Dark Souls I</p>
+                    <p class="provenienza-ost">Santuario del Legame del Fuoco</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/nexus.jpg" alt="The Nexus">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">The Nexus</p>
+                    <p class="provenienza-ost"> Demon's Souls</p>
+                    <p class="provenienza-ost">Il Nexus</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/astraea.jpg" alt="Maiden Astraea">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Maiden Astraea</p>
+                    <p class="provenienza-ost"> Demon's Souls</p>
+                    <p class="provenienza-ost">Astraea - Valle della Corruzione</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/dragon god.jpg" alt="Dragon God">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Dragon God</p>
+                    <p class="provenienza-ost"> Demon's Souls</p>
+                    <p class="provenienza-ost">Dio Drago - Tunnel di Stonefang</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/allant.jpg" alt="Old King Allant">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Old King Allant</p>
+                    <p class="provenienza-ost"> Demon's Souls</p>
+                    <p class="provenienza-ost">Vecchio Re Allant - Palazzo di Boletaria</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="oneWhoCarvesSouls.html">
+                    <img src="IMG/Collection/epilogue demon 2.jpg" alt="The Nexus">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">One Who Carves Souls</p>
+                    <p class="provenienza-ost"> Demon's Souls</p>
+                    <p class="provenienza-ost">Ending Alternativa </p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/majula.jpg" alt="Majula">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Majula</p>
+                    <p class="provenienza-ost"> Dark Souls II</p>
+                    <p class="provenienza-ost">Majula</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/ivory king.jpg" alt="Ivory King">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Burnt Ivory King</p>
+                    <p class="provenienza-ost">Dark Souls II</p>
+                    <p class="provenienza-ost">Re d'Avorio Bruciato</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/pursuer.jpg" alt="The Pursuer">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">The Pursuer</p>
+                    <p class="provenienza-ost"> Dark Souls II</p>
+                    <p class="provenienza-ost">Il Persecutore</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/darklurker.jpg" alt="Darklurker">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Darklurker</p>
+                    <p class="provenienza-ost">Dark Souls II</p>
+                    <p class="provenienza-ost">Cacciatore Oscuro</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/epilogue ds2.jpg" alt="Nowhere">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Nowhere</p>
+                    <p class="provenienza-ost"> Dark Souls II</p>
+                    <p class="provenienza-ost">Ending</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/reborn.jpg" alt="Reborn">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">One Reborn</p>
+                    <p class="provenienza-ost">Bloodborne</p>
+                    <p class="provenienza-ost">Il Rinato</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/amygdala.jpg" alt="Amygdala">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Amygdala</p>
+                    <p class="provenienza-ost">Bloodborne</p>
+                    <p class="provenienza-ost">Amygdala</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/ebrietas.jpg" alt="Ebrietas">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Ebrietas, Daugher of the Cosmos</p>
+                    <p class="provenienza-ost">Bloodborne</p>
+                    <p class="provenienza-ost">Ebrietas, Figlia del Cosmo</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="moonlitMelody.html">
+                    <img src="IMG/Collection/moonlit.jpg" alt="Moonlit">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Moonlit Meoldy</p>
+                    <p class="provenienza-ost">Bloodborne</p>
+                    <p class="provenienza-ost">Sogno del Cacciatore, ost Alternativa</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/nighmare.jpg" alt="***">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Hail the Nighmare</p>
+                    <p class="provenienza-ost">Bloodborne</p>
+                    <p class="provenienza-ost">Carcere Ipogeo, ost Alternativa</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/abyss watchers.jpg" alt="Abyss Watchers">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Abyss Watchers</p>
+                    <p class="provenienza-ost"> Dark Souls III</p>
+                    <p class="provenienza-ost">Guardiani dell'Abisso</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="pontiffSulyvahn.html">
+                    <img src="IMG/Collection/pontiff.jpg" alt="Sulyvahn">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Pontiff Sulyvahn</p>
+                    <p class="provenienza-ost"> Dark Souls III</p>
+                    <p class="provenienza-ost">Sulyvahn, il Gran Sacerdote</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/twin princes.jpg" alt="Twin Princes">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Twin Princes</p>
+                    <p class="provenienza-ost"> Dark Souls III</p>
+                    <p class="provenienza-ost">Lorian, Principe Primogenito & Lothric, Principe Secondogenito</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/firelink ds3.jpg" alt="Firelink">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Firelink Shrine</p>
+                    <p class="provenienza-ost"> Dark Souls III</p>
+                    <p class="provenienza-ost">Altare del Vincolo del Fuoco</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/betrayal.jpg" alt="Secret Betrayal">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Secret Betrayal</p>
+                    <p class="provenienza-ost"> Dark Souls III</p>
+                    <p class="provenienza-ost">Altare del Vincolo del Fuoco, ost Alternativa</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/ashina castle.jpg" alt=" ">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Ashina Castle</p>
+                    <p class="provenienza-ost">Sekiro</p>
+                    <p class="provenienza-ost">Castello di Ashina</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/senpou.jpg" alt=" ">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Senpou Temple, Mt.Kongo</p>
+                    <p class="provenienza-ost">Sekiro</p>
+                    <p class="provenienza-ost"> Tempio Senpou</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/genichiro.jpg" alt=" ">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Genichiro Ashina</p>
+                    <p class="provenienza-ost">Sekiro</p>
+                    <p class="provenienza-ost">Genichiro Ashina</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/godrick.jpg" alt="Godrick">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Godrick the Grafted</p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Godrick L'innestato</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/godskin.jpg" alt="Godskin">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Godskin Apostles</p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Apostoli Sacriderma</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/mohg.jpg" alt="Mohg">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Mohg, Lord of Blood</p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Mohg, Signore del Sangue</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/fortissax.jpg" alt="Fortissax">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Lichdragon Fortissax </p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Necrodrago Fortissax</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/caelid.jpg" alt="Caelid">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Caelid</p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Caelid</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/eternal city.jpg" alt="Eternal City ">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">Eternal City</p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Nokron, Città Eterna</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="altusPlateau.html">
+                    <img src="IMG/Collection/altus plateau.jpg" alt="Altus ">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost"> Altus Plateau</p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Altopiano di Altus</p>
+                </div>
+            </div>
+            <div class="ost-item">
+                <a href="#">
+                    <img src="IMG/Collection/elden ring.jpg" alt="Elden Ring">
+                </a>
+                <div class="overlay">
+                    <p class="nome-ost">The Final Battle</p>
+                    <p class="provenienza-ost">Elden Ring</p>
+                    <p class="provenienza-ost">Schermata del Titolo</p>
+                </div>
+            </div>
+        </div>
+        <div class="paginazione">
+            <a href="#" class="previous">&#8249;</a>
+            <a href="#" class="active numero-pagina" > 1 </a>
+            <a href="#" class="numero-pagina" > 2 </a>
+            <a href="#" class="numero-pagina" > 3 </a>
+            <a href="#" class="next">&#8250;</a>
+        </div>
+        <div class="disclaimer">
+            <p>Disclaimer: Questo sito non è affiliato, sponsorizzato o ufficialmente collegato ai creatori di contenuti menzionati. I link ai canali YouTube e ad altre risorse sono forniti esclusivamente a scopo informativo e per supportare la community. Tutti i diritti sui contenuti appartengono ai rispettivi proprietari. Se sei il titolare di uno dei contenuti segnalati e desideri la rimozione del link, contattaci.</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="contatti">
+            
+            <div class="link-contatti">
+                <p class="tipo-contatto">Cellulare:</p>
+                <p class="contatto">+39 318 149 8810 </p>
+            </div>
+            <div class="link-contatti">
+                <p class="tipo-contatto">Mail:</p>
+                <p class="contatto">narciso0000@gmail.com</p>
+            </div>
+            <div class="link-contatti">
+                <p class="tipo-contatto">Mail:</p>
+                <p class="contatto">FromSoftOST@gmail.com</p>
+            </div>
+            <div class="link-contatti">
+                <p class="tipo-contatto">Indirizzo:</p>
+                <p class="contatto">Bologna, via Grande Torre 1</p>
+            </div>
+        </div>
+        <div class="social">
+            <div class="link-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <p class="nome-social">Facebook </p>
+            </div>
+            <div class="link-social">
+                <a href="#" class="fa fa-twitter"></a>
+                <p class="nome-social">Twitter / X </p>
+            </div>
+            <div class="link-social">
+                <a href="#" class="fa fa-youtube"></a>
+                <p class="nome-social">Youtube </p>
+            </div>
+            <div class="link-social">
+                <a href="#" class="fa fa-instagram"></a>
+                <p class="nome-social">Instagram</p>
+            </div>
+        </div> 
+        <div class="altri-link">
+            <a href="ProjectPlan.html" class="project-link">Web Project Plan</a>
+            <p>F.A.Q</p>
+            <p>Licenza</p>
+            <p>Diritti d'uso</p>
+            <p>Cookie & Dati personali</p>
+            
+        </div>
+    </footer>
+  <script>
+      // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+  </script>
+</body>
+</html>

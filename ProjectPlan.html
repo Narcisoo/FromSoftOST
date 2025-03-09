@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Project Plan</title>
+</head>
+<style>
+	@font-face {
+    font-family: 'OptimusPrinceps';
+    src: url('OptimusPrinceps.woff2') format('woff2'),
+        url('OptimusPrinceps.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+	.pagina {
+		align-content: center;
+ 	 	border: 2px solid grey; 
+ 		padding: 5px 20px 20px 20px;
+ 		background-color: #0f0202;
+ 		font-family: OptimusPrinceps;
+	}
+
+	body{
+		background-color: #1f0101 ;
+		padding: 20px 150px 20px 150px;
+		color: whitesmoke;
+	}
+
+	h1{
+		text-align: center;
+		text-shadow: 2px 2px 4px #000000;
+		color: #700808;
+		font-size: 40px;
+	}
+
+	p{
+		padding: 0px 20px 10px 20px;
+		font-size: 16px;
+		justify-content:space-between ;
+		line-height: 18px;
+	}
+
+	h2{
+		background-color: #292323 ;
+ 	 	padding: 5px 50px;
+ 	 	color: whitesmoke;
+	}
+
+	.benchImgContainer{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.strutturaImgContainer{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		align-items: center;
+
+	}
+
+	.benchImgContainer img {
+	    max-width: 100%;
+	    height: auto;
+	    flex: 1 1 auto;
+	    object-fit: cover;
+	}
+
+
+	.strutturaImgContainer img {
+	    max-width: 100%;
+	    height: auto;
+	    flex: 1 1 auto;
+	    object-fit: cover;
+	}
+
+	.FromS{
+		font-weight: bold;	
+		font-style: italic;
+	}
+
+	.esempio{
+		font-style: italic;
+	}
+
+	.titolo{
+		font-weight: bold;	
+		font-style: italic;
+	}
+
+	.label {
+		text-align: center;
+	}
+
+    
+	.navbar{
+	    background-color: #3d4240;
+	    display: flex;
+	    flex-direction: row;
+	    padding: 10px 10px;
+	}   
+
+	.navbar a {
+ 		color: white;
+  		padding: 10px 10px;
+  		text-decoration: none;
+  		font-size: 17px;
+  		border-radius: 5px;
+	}	
+
+
+	.navbar a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+	.navbar a.active {
+	  background-color: #252927;
+	  color: white;
+	}
+
+
+
+
+	@media (max-width: 768px) {
+		body {
+			padding: 20px 40px; /* Ridurre i margini laterali */
+		}
+
+		.pagina {
+			padding: 5px 15px 15px 15px; /* Ridurre il padding */
+		}
+
+		h1 {
+			font-size: 28px; /* Ridurre la dimensione del font */
+		}
+
+		h2 {
+			font-size: 18px; /* Ridurre la dimensione del font */
+			padding: 5px 20px; /* Ridurre il padding */
+		}
+
+		p {
+			font-size: 14px; /* Aumentare la leggibilità su schermi piccoli */
+		}
+
+		.benchImgContainer{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+
+		}
+
+		.strutturaImgContainer{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			
+		}
+
+
+		 .navbar{
+   			 flex-direction: column;
+		}   
+	
+
+</style>
+
+<body>
+	<div class="pagina">
+        <header>
+        <div class="navbar">
+        	<div class="navbar-left">
+            	<a class="active" href="index.html">Home</a>
+  				<a href="collezione.html">Collezione</a>
+ 				<a href="ProjectPlan.html" class="nav-link">Project Management Plan</a>
+ 			</div>
+ 			<div class="login-container">
+    			<form action="/action_page.php">
+      				<input type="text" placeholder="Username" name="username">
+      				<input type="password" placeholder="Password" name="psw">
+     				<button type="submit">Login</button>
+    			</form>
+  			</div>
+        </div>
+
+    </header>
+	<h1> WEB PROJECT PLAN</h1>
+	<h2> IDEA </h2>
+	<p class="idea">
+		L’ idea consiste nel realizzare un archivio digitale contenente parte delle OST (o meglio conosciute come Soundtrack - Traccie Musicali) della famosa casa di sviluppo di videogiochi <span class="FromS"> FromSoftware</span>. Gli utenti potranno ascoltare le tracce audio e associare a loro l'origine <span class="esempio">(ad esempio traccia di un combattimento con un boss, musica ambientale, traccia del titolo e menù di gioco)</span>. <br>
+		Le tracce saranno accompagnate da una corrispettiva immagine, qualche informazione sulla composizione e tema della canzone e qualche informazione o trivia aggiuntiva da leggere durante l'ascolto.
+		<br>
+		I titoli principali da cui saranno tratte le tracce saranno, inizialmente  <span class="titolo"> la trilogia di Dark Souls, Bloodborne ed Elden Ring </span>con l'obbiettivo di includere il resto delle opere in futuro.
+	</p>
+
+	<h2> BRIEF </h2>
+	<p class="brief">
+		Lo scopo della raccolta è di raggruppare in un unico ambiente dedicato le OST delle varie serie videoludiche di FromSoftware in un unico ambiente in modo che appassionati e non possano ascoltarle. Uno degli obbiettivi è fornire qualche informazione aggiuntiva sulla traccia, qualche dettaglio sull'azienda e immagini esplicative da associare, in modo che i fan possano ritrovarsi in ciò che ascoltano mentre, per chi non conosce le opere, potervisi immergere e comprendere maggiormente gli scopi di tali musiche e pensiero dell'azienda.
+		<br>
+		Il target di tale sito non è specifico, chiunque può accedervi. Essendo però incentrato sulla musica e videogiochi, è chiaro che i principali visitatori potrebbero essere gli appassionati del genere videoludico o della casa sviluppatrice o amanti dei videogiochi in generale. Anche gli esperti di musica o i neofiti, o magari qualche studioso che sta studiando il genere o il fenomeno vediogiochi-musica potrebbero trovare un ambiente adatto.
+		<br>
+		L'accesso sarà principalmente tramite sito web, da browser, senza vincoli di piattaforma o strumento <span class="esempio"> (pc, smartphone, tablet ecc)</span> e non richiederà nessun accesso obbligatorio. Sarà possibile però creare un account in modo da poter rimanere aggiornati su nuove pubblicazioni, contribuire all'aggiornamento della libreria e poter partecipare a discussioni riguardanti le  opere e persino votare le proprie preferito in modo da creare una classifica.
+		<br>
+		I contenuti usati sono reperibili in rete <span class="esempio">(ad esempio youtubte)</span> e sono principalmente immagini e file audio.
+	</p>
+	<h2> BENCHMARK </h2>
+	<p class="benchmark">
+		Attualmente siti di questo genere non ne esistono. I più simili e vicini all'argomento trattato sono siti più generici che comprendono raccolte di vari videogiochi ed opere come <span class="titolo">Video Game Music</span> oppure siti di E-commerce in cui vendere le colonne sonore fisicamente quali <span class="titolo">Discogs, FromSoftware o Bandai</span>. Ci sono infine le sempreveredi piattaforme come <span class="titolo"> Youtube, Spotify, SoundCloud</span>. Gli elementi che accomunano questi siti sono una zona di navigazione che permette la ricerca per categoria o album. Tematicamente i colori sono vari, soprattutto se prendiamo in conto anche altri siti che trattano di musica. Ma se si guarda nel dettaglio, tra quelli che trattano di FromSoftware (come il proprio sito), i colori predominanti sono il nero, con temi più cupi, date le tematiche di cui trattano i videogiochi corrsipondenti.
+		<br>
+		<div class="benchImgContainer"> 
+		<img src="projectIMG/Bench1.png" class="immagineBench" height="450" width="650 ">
+		<img src="projectIMG/Bench2.png" class="immagineBench" height="450" width="650 ">
+		<img src="projectIMG/Bench4.png" class="immagineBench" height="450" width="650 ">
+		<img src="projectIMG/Bench6.png" class="immagineBench" height="450" width="650 ">
+		</div>
+		<br>
+		WIP
+	</p>
+
+	<h2> STRUTTURA </h2>
+	<p class="struttura">
+		<div class="strutturaImgContainer">
+		<label class="label"> Mappa Concettuale</label>
+		<img src="projectIMG/MappaConcettuale.png" class="immagineStruttura">
+		<label class="label"> Schema - Gerarchia</label>
+		<img src="" class="immagineStruttura">
+		</div>
+	</p>
+	</div>
+</body>
+</html>

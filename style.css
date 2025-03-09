@@ -1,0 +1,1080 @@
+@font-face {
+    font-family: 'OptimusPrinceps';
+    src: url('OptimusPrinceps.woff2') format('woff2'),
+        url('OptimusPrinceps.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: OptimusPrinceps, serif ;  
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+ 
+
+::-webkit-scrollbar-button{
+     background: #52460c; 
+     color: black;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #52460c; 
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}
+
+
+main, body{
+
+    background-image: linear-gradient(to right,#85700b,#52460c,#2b2504, black, black, black, black, black, black, black,
+     black, black, black, black, black, black, #2b2504,#52460c,#85700b);
+}
+
+
+footer{
+    float: bottom;
+    margin: 0;
+    padding: 0;
+    background-color: #3d4240;
+}
+
+header{
+    display: block;
+}
+
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,black,#2b2504,#52460c,#85700b,#85700b,#52460c,#2b2504,black);
+}
+
+    
+.navbar{
+   /* background-color: #3d4240;*/
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    text-align: center;
+} 
+
+
+.navbar-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding:16px;
+    float: left;
+
+}
+
+
+.navbar-left a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar-left a.active {
+  background-color: #b39c1e;
+  color: black;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+.navbar input[type=text], input[type=password] {
+    padding: 12px;
+    font-size: 17px;
+    width: 150px; 
+    border-radius: 5px;
+    border: none;
+
+}
+
+.navbar .login-container button {
+  padding: 12px 10px;
+  margin-right: 16px;
+  background: #b39c1e;
+  color: black;
+  font-size: 17px;
+  border: none;
+
+}
+
+.navbar .login-container button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.home-seleziona{
+    margin-block: 60px;
+    font-size: 50px;
+}
+
+.titolo{
+    font-size: 50px;
+}
+
+.sottotitolo{
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.ultime-aggiunte{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 100px;
+    color: white;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.img-home{
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ultime-aggiunte .img-home:hover{
+      transform: scale(1.25);  
+}
+
+.ost-popolare{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 100px;
+    color: white;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.ost-popolare .img-home:hover{
+      transform: scale(1.25);  
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 14px;
+    color: darkgoldenrod;
+    background-color: black;
+    padding: 5px;
+}
+
+.extra-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    color: white;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.img-collab{
+    border-radius: 25px;
+    object-fit: cover;
+    display: block;
+}
+
+.collab{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.collab-1, .collab-2, .collab-3, .collab-4{
+    border-radius: 25px;
+    box-shadow: 5px 4px 6px rgba(207, 180, 62, 0.3);
+}
+
+/*#85700b,#52460c,#2b2504,#cfb43e */
+
+.games-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+
+.game-image {
+    border-radius: 10px;
+    position: relative;
+    width: 270px; 
+    height: 540px;
+    overflow: hidden;
+    padding: 5px;
+    transition: transform 0.3s ease; /* per l'animazione di ingrandimento */
+    cursor: pointer;
+}
+
+.game-image img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* per ritagliare l'immagine in modo che riempia il contenitore */
+    transition: transform 0.3s ease; /* per l'animazione */
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* colore di sfondo trasparente */
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: none; /* inizialmente il testo non è visibile */
+}
+
+.game-image:hover .overlay {
+  display: block; /* il testo compare al passaggio del mouse */
+}
+
+.game-image:hover img {
+  transform: scale(1.25); /* ingrandisce l'immagine del 25% */
+
+}
+
+label{
+    font-size: 25px;
+}
+
+.filtraPer{
+    font-size: 35px;
+}
+
+.filtriOverlay-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-evenly;
+
+}
+
+.filtriOverlay-container .filtriGioco a{
+   font-size: 22px;
+}
+
+.filtriOverlay-container .filtriGenere a{
+   font-size: 22px;
+}
+.filtriOverlay-container .filtriPopolare a{
+   font-size: 22px;
+}
+
+.filtriGioco, .filtriGenere , .filtriPopolare{
+
+    padding: 5px 40px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.search-container input {
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #3d4240;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #b39c1e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.search-container button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.page-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0px;
+    color: white;
+}
+
+
+
+/* Style page content */
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.ost-item {
+
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ost-item:hover .overlay {
+  display: block; /* il testo compare al passaggio del mouse */
+
+}
+
+.ost-item:hover {
+    transform: scale(1.08);
+}
+
+.ost-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.ost-item p {
+    color: white;
+    font-weight: bold;
+    margin: 2px 0px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.nome-ost, .titolo-gioco{
+    font-size: 26px;
+    justify-content: center;
+
+}
+
+.provenienza-ost{
+    font-size: 13px;
+    justify-content: center;
+    text-justify: auto;
+
+}
+
+.home-seleziona{
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#HoverButton a{
+z-index: 1;
+  position: fixed; 
+  left: -66px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  margin-top: 10px;
+  padding: 15px; /* 15px padding */
+  width: 110px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  background-color: black;
+  border-radius: 0 20px 20px 0; /* Rounded corners on the top right and bottom right side */
+  text-align: right;
+}
+
+
+
+#HoverButton a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/
+#filtra {
+  top: 20px;
+  background-color: #white;
+ }
+
+
+/* The Overlay (background) */
+.sideOverlay {
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 15%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  color: white;
+}
+
+/* The navigation links inside the overlay */
+.sideOverlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sideOverlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.sideOverlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.overlay-container{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.paginazione{
+    margin: 20px;
+    text-align: center;
+}
+.paginazione a {
+    font-size: 40px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.numero-pagina{
+    color: #85700b;
+}
+.paginazione a:hover {
+  color: white;
+}
+
+.previous {
+    background-color: #85700b;
+    color: black;
+    border-radius: 50%;
+}
+
+.next {
+background-color:  #2b2504;
+color: white;
+border-radius: 50%;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: white; /* Add a dark-grey background on hover */
+  color: black;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .navbar{
+        flex-direction: column;
+        padding-bottom: 10px;
+    }   
+
+    .navbar-left {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 10px;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+    }
+
+
+    .game-image {
+        position: relative;
+        width: 450px; 
+        height: 150px;
+        overflow: hidden;
+        padding: 5px;
+        transition: transform 0.3s ease; 
+    }
+
+    .games-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .filtriOverlay-container{
+        display: flex;
+        flex-direction: column;
+
+    .filtriGioco{
+        padding: 30px 0px;
+    }
+
+     .filtriGenere{
+        padding: 30px 0px;
+    }
+
+     .filtriPopolare{
+        padding: 30px 0px;
+    }
+
+}
+}
+
+/*-----CSS PAGINA INDIVIDUALE-----*/
+
+/* Style the list */
+ul.breadcrumb {
+    float: left;
+    padding: 10px 16px;
+    list-style: none;
+    color: white;
+    background-color: black;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: white;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #85700b;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.titolo-brano{
+    margin-top: 15px;
+    padding-top: 30px;
+    text-align: center;
+    color: #85700b;
+
+}
+
+
+.media-container {
+    height: 90vh; /* Occupa l'80% dell'altezza dello schermo */
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 10px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 15px; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    justify-content: space-evenly; /* Equal space top & bottom */
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 20px; /* Left padding */
+
+
+}
+
+
+
+video::-webkit-media-controls {
+    display: none !important;  
+}
+
+#videoPlayer{
+    box-shadow: 5px 4px 6px rgba(207, 180, 62, 0.3);
+}
+
+
+audio::-webkit-media-controls-panel {
+    background-color: #85700b;  /* Colore di sfondo della barra di controllo */
+}
+
+video, audio {
+    width: 55%; /* Occupa il 60% del contenitore */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.comunity{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-evenly;
+}
+
+
+
+.fa {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.checked {
+  color: #85700b;
+}
+
+.unchecked{
+    color: white;
+}
+
+#notificaLogin{
+    font-size: 20px;
+}
+
+.notifica {
+    position: fixed;
+    bottom: -100px; /* Partenza dalla parte inferiore fuori dallo schermo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    z-index: 9999;
+    transition: bottom 0.5s ease-in-out; /* Animazione per far apparire la notifica */
+}
+
+/* Notifica che si muove verso l'alto */
+.notifica.show {
+    bottom: 20px; /* Spostamento verso l'alto */
+}
+
+
+/* Aggiungi lo stile del bottone collapsible */
+.collapsible {
+  background-color: #eee;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  width: 60%; /* Larghezza relativa */
+  max-width: 600px; /* Larghezza massima */
+  border: none;
+  border-radius: 30px;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px auto; /* Centra il bottone orizzontalmente */
+  display: block;    /* Assicurati che il bottone sia un elemento di tipo blocco */
+  box-shadow: 10px 10px 25px 5px black inset;
+}
+
+/* Aggiungi un colore di sfondo quando viene cliccato o quando l'utente ci passa sopra */
+.attivo, .collapsible:hover {
+  background-color: #cfb43e;
+}
+
+.collapsible:after {
+  content: '\25B2'; /* Unicode character for "plus" sign (+) */
+  font-size: 26px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.attivo:after {
+  content: "\25BC"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.contenuto-descrizione {
+  padding: 0 18px;
+  background-color: #52460c;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 60%; /* Imposta anche qui la larghezza */
+  max-width: 900px; /* Larghezza massima */
+  margin: 0 auto; /* Centra il contenuto orizzontalmente */
+  display: block;
+}
+
+/* Style for expanding content */
+.contenuto-descrizione.expanded {
+  max-height: 1200px; /* Assicurati che ci sia una massima altezza che consenta di visualizzare il contenuto */
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+/* Centra la descrizione */
+.descrizione {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    align-items: center;
+}
+
+/* Stile della tabella metadata */
+.metadata-table {
+  width: 100%;
+  border-collapse: collapse; /* Per evitare spazi tra le celle */
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Stile delle righe della tabella */
+.metadata-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd; /* Aggiunge una linea di separazione tra le righe */
+}
+
+/* Zebra-striped table */
+.metadata-table tr:nth-child(even) {
+  background-color: #cfb43e; /* Colore di sfondo per le righe pari */
+}
+
+.metadata-table tr:nth-child(odd) {
+  background-color: #85700b; /* Colore di sfondo per le righe dispari */
+}
+
+/* Rende il testo delle etichette in grassetto */
+.metadata-table td strong {
+  font-weight: bold;
+}
+
+
+
+
+/*-----MEDIA QUERY-----*/
+@media (max-width: 992px) {
+     .game-image {
+        position: relative;
+        width: 450px; 
+        height: 250px;
+        overflow: hidden;
+        padding: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .games-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+      .media-container {
+        width: 100vw; /* Più largo su schermi piccoli */
+        height: 100vh;
+        margin: 0;
+        padding: 5px;
+        justify-content: center;
+        justify-items: center;
+        gap: 10px;
+        background-size: cover;
+    }
+
+    video, audio {
+        width: 100%;
+        border-radius: 20px;
+        padding: 1%;
+          
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .link-contatti, .link-social{
+        font-size: 15px;
+    }
+
+        .collab{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+}
+
+
+
+
+/* ----- FOOTER ----- */
+.footer-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    color: white;
+    
+    gap: 20px;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right,black, #85700b, black) ;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.link-social{
+    display: flex; 
+}
+
+.nome-social{
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+footer .fa {
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+.fa-facebook:hover {
+  color: #1877F2;
+}
+.fa-youtube:hover {
+  color: #CD201F;
+}
+.fa-twitter:hover {
+  color: #1DA1F2;
+}
+.fa-instagram:hover {
+  color:  #c13584;
+}
+
+.fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
+  color: white;
+}
+
+.contatti{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, black,#85700b, black) ;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.link-contatti{
+    display: flex; 
+    font-size: 20px;
+    gap: 15px;
+}
+
+.altri-link{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right,black, #85700b, black) ;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.project-link{
+     text-decoration: none;
+     color: white;
+}
+
+.project-link:hover{
+    color: darkred;
+}
+
+/* ----- MEDIA QUERY ----- */
+
+@media (min-width: 1200px) {
+  .game-image {
+    width: calc(100% / 7); /* Aumenta la larghezza delle immagini per riempire lo spazio disponibile */
+    height: auto; /* Altezza automatica per mantenere il ratio */
+  }
+}
+
+@media (max-width: 1200px){
+     .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .link-contatti, .link-social{
+        font-size: 20px;
+    }
+
+
+}
+
+@media (max-width: 678px) {
+    .ultime-aggiunte{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+        font-size: 30px;
+    }
+
+
+     .ost-popolare{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+        font-size: 30px;
+    }
+
+
+    .media-container {
+        width: 100vw; 
+        height: 100vh;
+        margin: 0;
+        padding: 5px;
+        justify-content: center;
+        justify-items: center;
+        gap: 10px;
+        background-size: cover;
+    }
+
+    video, audio {
+        width: 100%;
+        border-radius: 10px;
+        padding: 1%;
+          
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .collapsible, .contenuto-descrizione {
+    width: 80%; /* Aumenta la larghezza al 80% su schermi più piccoli */
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .link-contatti, .link-social{
+        font-size: 15px;
+    }
+
+
+.collab{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+}
+
+
+
