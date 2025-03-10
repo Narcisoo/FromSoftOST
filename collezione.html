@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
     <script src="script.js"></script>
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+    <meta name="DC.title" content="FromSoftOST">
+    <meta name="DC.Creator" content="Narcis Bugan">
+    <meta name="DC.Subject" content="Ost della casa di sviluppo FromSoftware">
+    <meta name="DC.Publisher" content="Git Hub">
+    <meta name="DC.Date" content="10/03/2025">
+    <meta name="DC.Type" content="video, audio, immagini">
+    <meta name="DC.Format" content=".html, .css, .js, .jpg, .png, .mp3, .mp4">
+    <meta name="DC.Identifier" content="https://narcisoo.github.io/FromSoftOST/">
+    <meta name="DC.Language" content="it-IT">
+    <meta name="DC.Rights" content="Creative Commons">
 </head>
 <body>
 
@@ -48,8 +59,8 @@
             <div class="overlay-container">
                 <p class="filtraPer"> Cerca una OST</p>
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Cerca una OST..." onkeyup="searchGames()">
-                    <button onclick="searchGames()"> <i class="material-icons">&#xe8b6;</i></button>
+                    <input type="text" id="searchInput" placeholder="Cerca una OST..." onkeyup="searchOSTs()" onkeydown="checkEnter(event)">
+                    <button onclick="searchOSTs(); closeNav();"> <i class="material-icons">&#xe8b6;</i></button>
                 </div>
 
                 <p class="filtraPer"> Filtra per:</p>
@@ -57,9 +68,9 @@
                     <div class="filtriGioco">
                         <label class="title">Gioco</label>
                         <a href="#">Demon's Souls</a>
-                        <a href="#">Dark Soul I</a>
-                        <a href="#">Dark Soul II</a>
-                        <a href="#">Dark Soul III</a>
+                        <a href="#">Dark Souls I</a>
+                        <a href="#">Dark Souls II</a>
+                        <a href="#">Dark Souls III</a>
                         <a href="#">Bloodborne</a>
                         <a href="#">Sekiro: Shadows Die Twice</a>
                         <a href="#">Elden Ring</a>
@@ -81,7 +92,7 @@
                         <a href="#">Meno Ascoltato</a>
                     </div>
                 </div>
-
+                <a href="#" id="rimuoviFiltro" onclick="resetFilters()">Rimuvi Filtri</a>
             </div> 
          </div>
 
@@ -90,14 +101,22 @@
 
     <!-- MAIN CONTENT -->
     <div id="HoverButton" class="sidenav">
-          <a href="#" id="Filtra"> <span onclick="openNav()">filtri</span>  <span> </span> <i class="material-icons">&#xe8b6;</i></a>
+          <a href="#" id="Filtra"> <span onclick="openNav()">filtri</span>  <span> </span> <i class="material-icons">&#xe8b6;</i></a>  
     </div>
+
     <main>
         <h1 class="page-title">Collezione delle OST</h1>
         <div class="collection-grid"> 
             <div class="ost-item">
                 <a href="knightArtorias.html">
                     <img src="IMG/Collection/artorias.jpg" alt="Artorias">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Knight Artorias"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba"></span>
+                        <span><meta name="DC.Date" content="2011"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls I"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Knight Artorias</p>
@@ -108,6 +127,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/ash lake.jpg" alt="Ash Lake">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Ash Lake"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba"></span>
+                        <span><meta name="DC.Date" content="2011"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Dark Souls I"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">The Ancient Dragon</p>
@@ -118,6 +144,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/fair lady.jpg" alt="Fair Lady, Daugher of Chaos">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Daughers of Chaos"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba"></span>
+                        <span><meta name="DC.Date" content="2011"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Dark Souls I"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Daughters of Chaos</p>
@@ -128,6 +161,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/gwyndolin.jpg" alt="Gwyndolin">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Dark Sun Gwyndolin"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba"></span>
+                        <span><meta name="DC.Date" content="2011"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls I"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Dark Sun Gwyindolin</p>
@@ -138,6 +178,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/firelink ds1.jpg" alt="Firelink, Dark Souls I">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Firelink Shrine"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba"></span>
+                        <span><meta name="DC.Date" content="2011"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Dark Souls I"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Firelink Shrine</p>
@@ -148,6 +195,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/nexus.jpg" alt="The Nexus">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="The Nexus"></span>
+                        <span><meta name="DC.Creator" content="Shunsuke Kida"></span>
+                        <span><meta name="DC.Date" content="2009"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Demon's Souls"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">The Nexus</p>
@@ -158,6 +212,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/astraea.jpg" alt="Maiden Astraea">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Maiden Astraea"></span>
+                        <span><meta name="DC.Creator" content="Shunsuke Kida"></span>
+                        <span><meta name="DC.Date" content="2009"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Demon's Souls"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Maiden Astraea</p>
@@ -168,6 +229,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/dragon god.jpg" alt="Dragon God">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Dragon God"></span>
+                        <span><meta name="DC.Creator" content="Shunsuke Kida"></span>
+                        <span><meta name="DC.Date" content="2009"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Demon's Souls"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Dragon God</p>
@@ -178,6 +246,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/allant.jpg" alt="Old King Allant">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Old King Allant"></span>
+                        <span><meta name="DC.Creator" content="Shunsuke Kida"></span>
+                        <span><meta name="DC.Date" content="2009"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Demon's Souls"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Old King Allant</p>
@@ -187,7 +262,14 @@
             </div>
             <div class="ost-item">
                 <a href="oneWhoCarvesSouls.html">
-                    <img src="IMG/Collection/epilogue demon 2.jpg" alt="The Nexus">
+                    <img src="IMG/Collection/epilogue demon 2.jpg" alt="Epilogue">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="One Who Carves Souls"></span>
+                        <span><meta name="DC.Creator" content="Shunsuke Kida"></span>
+                        <span><meta name="DC.Date" content="2009"></span>
+                        <span><meta name="Genere" content="Endings"></span>
+                        <span><meta name="Gioco" content="Demon's Souls"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">One Who Carves Souls</p>
@@ -198,6 +280,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/majula.jpg" alt="Majula">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Majula"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2014"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Dark Souls II"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Majula</p>
@@ -208,6 +297,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/ivory king.jpg" alt="Ivory King">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Burnt Ivory King"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2014"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls II"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Burnt Ivory King</p>
@@ -218,6 +314,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/pursuer.jpg" alt="The Pursuer">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="The Pursuer"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2014"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls II"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">The Pursuer</p>
@@ -228,6 +331,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/darklurker.jpg" alt="Darklurker">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Darklurker"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2014"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls II"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Darklurker</p>
@@ -238,6 +348,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/epilogue ds2.jpg" alt="Nowhere">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Nowhere"></span>
+                        <span><meta name="DC.Creator" content="Motoi Sakuraba, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2014"></span>
+                        <span><meta name="Genere" content="Endings"></span>
+                        <span><meta name="Gioco" content="Dark Souls II"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Nowhere</p>
@@ -248,6 +365,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/reborn.jpg" alt="Reborn">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="One Reborn"></span>
+                        <span><meta name="DC.Creator" content="Tsukasa Saitoh, Yuka Kitamura, Nobuyoshi Suzuki, Cris Velasco, Ryan Amon, Michael Wandmacher"></span>
+                        <span><meta name="DC.Date" content="2015"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Bloodborne"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">One Reborn</p>
@@ -258,6 +382,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/amygdala.jpg" alt="Amygdala">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Amygdala"></span>
+                        <span><meta name="DC.Creator" content="Tsukasa Saitoh, Yuka Kitamura, Nobuyoshi Suzuki, Cris Velasco, Ryan Amon, Michael Wandmacher"></span>
+                        <span><meta name="DC.Date" content="2015"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Bloodborne"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Amygdala</p>
@@ -268,6 +399,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/ebrietas.jpg" alt="Ebrietas">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Ebrietas, Daugher of the Cosmos"></span>
+                        <span><meta name="DC.Creator" content="Tsukasa Saitoh, Yuka Kitamura, Nobuyoshi Suzuki, Cris Velasco, Ryan Amon, Michael Wandmacher"></span>
+                        <span><meta name="DC.Date" content="2015"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Bloodborne"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Ebrietas, Daugher of the Cosmos</p>
@@ -278,6 +416,13 @@
             <div class="ost-item">
                 <a href="moonlitMelody.html">
                     <img src="IMG/Collection/moonlit.jpg" alt="Moonlit">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Moonlit Melody"></span>
+                        <span><meta name="DC.Creator" content="Tsukasa Saitoh, Yuka Kitamura, Nobuyoshi Suzuki, Cris Velasco, Ryan Amon, Michael Wandmacher"></span>
+                        <span><meta name="DC.Date" content="2015"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Bloodborne"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Moonlit Meoldy</p>
@@ -287,7 +432,14 @@
             </div>
             <div class="ost-item">
                 <a href="#">
-                    <img src="IMG/Collection/nighmare.jpg" alt="***">
+                    <img src="IMG/Collection/nighmare.jpg" alt="Hail the Nightmare">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Hail the Nighmare"></span>
+                        <span><meta name="DC.Creator" content="Tsukasa Saitoh, Yuka Kitamura, Nobuyoshi Suzuki, Cris Velasco, Ryan Amon, Michael Wandmacher"></span>
+                        <span><meta name="DC.Date" content="2015"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Bloodborne"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Hail the Nighmare</p>
@@ -298,6 +450,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/abyss watchers.jpg" alt="Abyss Watchers">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Abyss Watchers"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura, Motoi Sakuraba, Nobuyoshi Suzuki"></span>
+                        <span><meta name="DC.Date" content="2016"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls III"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Abyss Watchers</p>
@@ -308,6 +467,13 @@
             <div class="ost-item">
                 <a href="pontiffSulyvahn.html">
                     <img src="IMG/Collection/pontiff.jpg" alt="Sulyvahn">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Pontiff Sulyvahn"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura, Motoi Sakuraba, Nobuyoshi Suzuki"></span>
+                        <span><meta name="DC.Date" content="2016"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls III"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Pontiff Sulyvahn</p>
@@ -318,6 +484,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/twin princes.jpg" alt="Twin Princes">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Twin Princes"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura, Motoi Sakuraba, Nobuyoshi Suzuki"></span>
+                        <span><meta name="DC.Date" content="2016"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Dark Souls III"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Twin Princes</p>
@@ -328,6 +501,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/firelink ds3.jpg" alt="Firelink">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Firelink Shrine"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura, Motoi Sakuraba, Nobuyoshi Suzuki"></span>
+                        <span><meta name="DC.Date" content="2016"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Dark Souls III"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Firelink Shrine</p>
@@ -338,6 +518,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/betrayal.jpg" alt="Secret Betrayal">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Secret Betrayal"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura, Motoi Sakuraba, Nobuyoshi Suzuki"></span>
+                        <span><meta name="DC.Date" content="2016"></span>
+                        <span><meta name="Genere" content="Mappa, Endings"></span>
+                        <span><meta name="Gioco" content="Dark Souls III"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Secret Betrayal</p>
@@ -347,7 +534,14 @@
             </div>
             <div class="ost-item">
                 <a href="#">
-                    <img src="IMG/Collection/ashina castle.jpg" alt=" ">
+                    <img src="IMG/Collection/ashina castle.jpg" alt="ashina castle">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Ashina Castle"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2019"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Sekiro: Shadows Die Twice"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Ashina Castle</p>
@@ -357,7 +551,14 @@
             </div>
             <div class="ost-item">
                 <a href="#">
-                    <img src="IMG/Collection/senpou.jpg" alt=" ">
+                    <img src="IMG/Collection/senpou.jpg" alt="senpou ">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Senpou Temple"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2019"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Sekiro: Shadows Die Twice"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Senpou Temple, Mt.Kongo</p>
@@ -367,7 +568,14 @@
             </div>
             <div class="ost-item">
                 <a href="#">
-                    <img src="IMG/Collection/genichiro.jpg" alt=" ">
+                    <img src="IMG/Collection/genichiro.jpg" alt=" genichiro">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Genichiro Ashina"></span>
+                        <span><meta name="DC.Creator" content="Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2019"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Sekiro: Shadows Die Twice"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Genichiro Ashina</p>
@@ -378,6 +586,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/godrick.jpg" alt="Godrick">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Godrick the Grafted"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Elden Ring"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Godrick the Grafted</p>
@@ -388,6 +603,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/godskin.jpg" alt="Godskin">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Godskin Apostles"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Elden Ring"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Godskin Apostles</p>
@@ -398,6 +620,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/mohg.jpg" alt="Mohg">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Mohg, Lord of Blood"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                        <span><meta name="Genere" content="Boss"></span>
+                        <span><meta name="Gioco" content="Elden Ring"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Mohg, Lord of Blood</p>
@@ -408,16 +637,30 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/fortissax.jpg" alt="Fortissax">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Lichdragon Fortissax"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Lichdragon Fortissax </p>
                     <p class="provenienza-ost">Elden Ring</p>
                     <p class="provenienza-ost">Necrodrago Fortissax</p>
+                    <span><meta name="Genere" content="Boss"></span>
+                    <span><meta name="Gioco" content="Elden Ring"></span>
                 </div>
             </div>
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/caelid.jpg" alt="Caelid">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Caelid"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Elden Ring"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Caelid</p>
@@ -428,6 +671,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/eternal city.jpg" alt="Eternal City ">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Eternal City"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Elden Ring"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">Eternal City</p>
@@ -438,6 +688,13 @@
             <div class="ost-item">
                 <a href="altusPlateau.html">
                     <img src="IMG/Collection/altus plateau.jpg" alt="Altus ">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="Altus Plateau"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                        <span><meta name="Genere" content="Mappa"></span>
+                        <span><meta name="Gioco" content="Elden Ring"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost"> Altus Plateau</p>
@@ -448,6 +705,13 @@
             <div class="ost-item">
                 <a href="#">
                     <img src="IMG/Collection/elden ring.jpg" alt="Elden Ring">
+                    <div class="categorieDC">
+                        <span><meta name="DC.title" content="The Final Boss Battle"></span>
+                        <span><meta name="DC.Creator" content="sukasa Saitoh, Shoi Miyazawa, Tai Tomisawa, Yoshimi Kudo, Yuka Kitamura"></span>
+                        <span><meta name="DC.Date" content="2022"></span>
+                        <span><meta name="Genere" content="Title Screen"></span>
+                        <span><meta name="Gioco" content="Elden Ring"></span>
+                    </div>
                 </a>
                 <div class="overlay">
                     <p class="nome-ost">The Final Battle</p>
@@ -534,6 +798,95 @@
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // Variabili per memorizzare i filtri attivi
+        let activeGameFilter = null;
+        let activeGenreFilter = null;
+
+        function filterOSTs() {
+            let ostItems = document.querySelectorAll('.ost-item');
+
+            ostItems.forEach(item => {
+                let gameMeta = item.querySelector('.categorieDC meta[name="Gioco"]');
+                let genreMeta = item.querySelector('.categorieDC meta[name="Genere"]');
+
+                let gameMatch = !activeGameFilter || (gameMeta && gameMeta.content === activeGameFilter);
+                let genreMatch = !activeGenreFilter || (genreMeta && genreMeta.content === activeGenreFilter);
+
+                if (gameMatch && genreMatch) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+        // Funzioni per filtrare per gioco o per genere
+        function filterByGame(gameName) {
+            activeGameFilter = gameName;
+            filterOSTs();
+            closeNav();
+        }
+
+        function filterByGenre(genreName) {
+            activeGenreFilter = genreName;
+            filterOSTs();
+            closeNav();
+        }
+
+        // Aggiunge event listener ai filtri dei giochi
+        document.addEventListener("DOMContentLoaded", function() {
+            let gameFilterLinks = document.querySelectorAll(".filtriGioco a");
+            gameFilterLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    let gameName = this.textContent;
+                    filterByGame(gameName);
+                });
+            });
+
+            // Aggiunge event listener ai filtri di genere
+            let genreFilterLinks = document.querySelectorAll(".filtriGenere a");
+            genreFilterLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    let genreName = this.textContent;
+                    filterByGenre(genreName);
+                });
+            });
+        });
+
+        function resetFilters() {
+            activeGameFilter = null;
+            activeGenreFilter = null;
+            filterOSTs();
+        }
+
+        function checkEnter(event) {
+            if (event.keyCode === 13) {  // 13 è il codice per il tasto Invio
+                closeNav();  // Chiude l'overlay
+            }
+        }
+
+        function searchOSTs() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let ostItems = document.querySelectorAll('.ost-item');
+            
+            ostItems.forEach(item => {
+                let title = item.querySelector('.nome-ost').textContent.toLowerCase();
+                
+                // Se il titolo contiene il testo di ricerca, mostra l'OST, altrimenti nascondila
+                if (title.includes(input)) {
+                    item.style.display = '';  // Mostra l'OST
+                } else {
+                    item.style.display = 'none';  // Nascondi l'OST
+                }
+            });
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";  // Nascondi l'overlay
         }
   </script>
 </body>

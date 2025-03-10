@@ -1,17 +1,3 @@
-function searchGames() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let games = document.querySelectorAll(".game-image");
-
-    games.forEach(game => {
-        let title = game.querySelector(".overlay p").textContent.toLowerCase();
-        if (title.includes(input)) {
-            game.style.display = "block";
-        } else {
-            game.style.display = "none";
-        }
-    });
-}
-
 
 
 /* Open when someone clicks on the span element */

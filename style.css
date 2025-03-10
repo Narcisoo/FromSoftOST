@@ -1,3 +1,12 @@
+/* --  COLORI --
+#838E88 (grigio chiaro)
+#43484E (grigio medio)
+#322E2D (grigio scuro)
+#56220C (rosso-mattone)
+#293448 (blu-scuro)
+*/
+
+
 @font-face {
     font-family: 'OptimusPrinceps';
     src: url('OptimusPrinceps.woff2') format('woff2'),
@@ -27,14 +36,14 @@
  
 
 ::-webkit-scrollbar-button{
-     background: #52460c; 
+     background: #322E2D; 
      color: black;
 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #52460c; 
+  background: #43484E; 
   border-radius: 12px;
 }
 
@@ -45,9 +54,12 @@
 
 
 main, body{
-
+    /*
     background-image: linear-gradient(to right,#85700b,#52460c,#2b2504, black, black, black, black, black, black, black,
      black, black, black, black, black, black, #2b2504,#52460c,#85700b);
+     */
+    background-image: linear-gradient(to right,#838E88,#43484E,#322E2D, black, black, black, black, black, black, black,
+     black, black, black, black, #322E2D,#43484E,#838E88);
 }
 
 
@@ -55,7 +67,7 @@ footer{
     float: bottom;
     margin: 0;
     padding: 0;
-    background-color: #3d4240;
+   
 }
 
 header{
@@ -68,7 +80,8 @@ header{
     padding: 10px 0px;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right,black,#2b2504,#52460c,#85700b,#85700b,#52460c,#2b2504,black);
+    background-image: linear-gradient(to right,black,#322E2D,#43484E ,#43484E,#838E88,#838E88
+        ,#43484E,#43484E,#322E2D,black);
 }
 
     
@@ -94,13 +107,13 @@ header{
 
 
 .navbar-left a:hover {
-  background-color: #ddd;
+  background-color: white;
   color: black;
 }
 
 .navbar-left a.active {
-  background-color: #b39c1e;
-  color: black;
+  background-color: #56220C;
+  color: white;
 }
 
 .login-container{
@@ -126,15 +139,15 @@ header{
 .navbar .login-container button {
   padding: 12px 10px;
   margin-right: 16px;
-  background: #b39c1e;
-  color: black;
+  background: #56220C;
+  color: white;
   font-size: 17px;
   border: none;
 
 }
 
 .navbar .login-container button:hover {
-  background-color: #ddd;
+  background-color: white;
   color: black;
 }
 
@@ -194,7 +207,7 @@ header{
 .disclaimer {
     text-align: center;
     font-size: 14px;
-    color: darkgoldenrod;
+    color: white;
     background-color: black;
     padding: 5px;
 }
@@ -227,7 +240,7 @@ header{
 
 .collab-1, .collab-2, .collab-3, .collab-4{
     border-radius: 25px;
-    box-shadow: 5px 4px 6px rgba(207, 180, 62, 0.3);
+    box-shadow: 5px 4px 6px #838E88;
 }
 
 /*#85700b,#52460c,#2b2504,#cfb43e */
@@ -325,18 +338,18 @@ label{
     width: 50%;
     padding: 10px;
     font-size: 18px;
-    border: 2px solid #3d4240;
-    border-radius: 5px;
+    border: 2px solid black;
+    border-radius: 15px;
     outline: none;
 }
 
 .search-container button {
     padding: 10px;
-    background-color: #b39c1e;
+    background-color: #56220C;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-left: 5px;
     font-size: 18px;
 }
@@ -422,19 +435,19 @@ a:hover{
 }
 
 #HoverButton a{
-z-index: 1;
-  position: fixed; 
-  left: -66px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
-  margin-top: 10px;
-  padding: 15px; /* 15px padding */
-  width: 110px; /* Set a specific width */
-  text-decoration: none; /* Remove underline */
-  font-size: 20px; /* Increase font size */
-  color: white; /* White text color */
-  background-color: black;
-  border-radius: 0 20px 20px 0; /* Rounded corners on the top right and bottom right side */
-  text-align: right;
+    z-index: 1;
+    position: fixed; 
+    left: -66px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    margin-top: 10px;
+    padding: 15px; /* 15px padding */
+    width: 110px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    background-color: black;
+    border-radius: 0 20px 20px 0; /* Rounded corners on the top right and bottom right side */
+    text-align: right;
 }
 
 
@@ -486,7 +499,7 @@ z-index: 1;
 
 /* When you mouse over the navigation links, change their color */
 .sideOverlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: white;
 }
 
 /* Position the close button (top right corner) */
@@ -515,21 +528,21 @@ z-index: 1;
 }
 
 .numero-pagina{
-    color: #85700b;
+    color: white;
 }
 .paginazione a:hover {
-  color: white;
+    color: white;
 }
 
 .previous {
-    background-color: #85700b;
+    background-color: #56220C;
     color: black;
     border-radius: 50%;
 }
 
 .next {
-background-color:  #2b2504;
-color: white;
+background-color:  #56220C;
+color: black;
 border-radius: 50%;
 }
 
@@ -638,7 +651,7 @@ ul.breadcrumb li+li:before {
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-  color: #85700b;
+  color: #823E21;
   text-decoration: none;
 }
 
@@ -650,10 +663,11 @@ ul.breadcrumb li a:hover {
 
 
 .titolo-brano{
+    font-size: 50px;
     margin-top: 15px;
     padding-top: 30px;
     text-align: center;
-    color: #85700b;
+    color: #838E88;
 
 }
 
@@ -684,12 +698,12 @@ video::-webkit-media-controls {
 }
 
 #videoPlayer{
-    box-shadow: 5px 4px 6px rgba(207, 180, 62, 0.3);
+    box-shadow: 5px 4px 6px #838E88;
 }
 
 
 audio::-webkit-media-controls-panel {
-    background-color: #85700b;  /* Colore di sfondo della barra di controllo */
+    background-color: #838E88;  /* Colore di sfondo della barra di controllo */
 }
 
 video, audio {
@@ -713,7 +727,7 @@ video, audio {
 }
 
 .checked {
-  color: #85700b;
+  color: #823E21;
 }
 
 .unchecked{
@@ -729,7 +743,7 @@ video, audio {
     bottom: -100px; /* Partenza dalla parte inferiore fuori dallo schermo */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
+    background-color: #322E2D;
     color: white;
     padding: 15px;
     border-radius: 5px;
@@ -747,26 +761,25 @@ video, audio {
 
 /* Aggiungi lo stile del bottone collapsible */
 .collapsible {
-  background-color: #eee;
-  color: black;
+  background-color: #43484E;
+  color: white;
   cursor: pointer;
   padding: 15px;
   width: 60%; /* Larghezza relativa */
-  max-width: 600px; /* Larghezza massima */
+  max-width: 1000px; /* Larghezza massima */
   border: none;
-  border-radius: 30px;
-  text-align: left;
+  text-align: center;
   outline: none;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  margin: 10px auto; /* Centra il bottone orizzontalmente */
+  margin: 10px auto 0px auto; /* Centra il bottone orizzontalmente */
   display: block;    /* Assicurati che il bottone sia un elemento di tipo blocco */
-  box-shadow: 10px 10px 25px 5px black inset;
 }
 
 /* Aggiungi un colore di sfondo quando viene cliccato o quando l'utente ci passa sopra */
 .attivo, .collapsible:hover {
-  background-color: #cfb43e;
+  background-color: white;
+  color: black;
 }
 
 .collapsible:after {
@@ -784,12 +797,12 @@ video, audio {
 /* Style the collapsible content. Note: hidden by default */
 .contenuto-descrizione {
   padding: 0 18px;
-  background-color: #52460c;
+  background-color: #838E88;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   width: 60%; /* Imposta anche qui la larghezza */
-  max-width: 900px; /* Larghezza massima */
+  max-width: 1000px; /* Larghezza massima */
   margin: 0 auto; /* Centra il contenuto orizzontalmente */
   display: block;
 }
@@ -800,7 +813,7 @@ video, audio {
   padding: 10px;
   font-weight: bold;
   margin-bottom: 15px;
-  border-radius: 15px;
+  
 }
 
 /* Centra la descrizione */
@@ -829,11 +842,13 @@ video, audio {
 
 /* Zebra-striped table */
 .metadata-table tr:nth-child(even) {
-  background-color: #cfb43e; /* Colore di sfondo per le righe pari */
+  background-color: #838E88; /* Colore di sfondo per le righe pari */
+  color: black;
 }
 
 .metadata-table tr:nth-child(odd) {
-  background-color: #85700b; /* Colore di sfondo per le righe dispari */
+  background-color: #322E2D; /* Colore di sfondo per le righe dispari */
+  color: white;
 }
 
 /* Rende il testo delle etichette in grassetto */
@@ -904,16 +919,15 @@ video, audio {
 .footer-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: black;
-    color: white;
-    
+    color: black;
+    font-weight: bold;
     gap: 20px;
 }
 
 .social{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right,black, #85700b, black) ;
+    background-image: linear-gradient(to right,black, #838E88, black) ;
     gap: 15px;
     align-items: center;
     justify-content: center;
@@ -957,7 +971,7 @@ footer .fa {
 .contatti{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right, black,#85700b, black) ;
+    background-image: linear-gradient(to right, black,#838E88, black) ;
     gap: 15px;
     align-items: center;
     justify-content: center;
@@ -973,7 +987,7 @@ footer .fa {
 .altri-link{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right,black, #85700b, black) ;
+    background-image: linear-gradient(to right,black, #838E88, black) ;
     gap: 15px;
     align-items: center;
     justify-content: center;
@@ -982,11 +996,11 @@ footer .fa {
 
 .project-link{
      text-decoration: none;
-     color: white;
+     color: black;
 }
 
 .project-link:hover{
-    color: darkred;
+    color: #823E21;
 }
 
 /* ----- MEDIA QUERY ----- */
