@@ -1,190 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Web Project Plan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Plan</title>
+    <link rel="stylesheet" type='text/css' href="style.css">
+        <style>
+    	main, body{
+    		background-image: none ;
+    		background-color: white;
+    		color: black !important;
+    	}
+
+    	#myBtn{
+    		color: white;
+    		background-color: #322E2D;
+    		border: solid black 2px;
+    	}
+
+    	#myBtn:hover{
+    		background-color: white;
+    		color: black;
+    	}
+
+    	h1{
+		    margin-top: 40px;
+		    color:red;
+		    font-weight: bold;
+		    text-shadow: 1px 1px 3px black;
+		}
+
+    </style>
 </head>
-<style>
-	@font-face {
-    font-family: 'OptimusPrinceps';
-    src: url('OptimusPrinceps.woff2') format('woff2'),
-        url('OptimusPrinceps.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
 
-	.pagina {
-		align-content: center;
- 	 	border: 2px solid grey; 
- 		padding: 5px 20px 20px 20px;
- 		background-color: #0f0202;
- 		font-family: OptimusPrinceps;
-	}
-
-	body{
-		background-color: #1f0101 ;
-		padding: 20px 150px 20px 150px;
-		color: whitesmoke;
-	}
-
-	h1{
-		text-align: center;
-		text-shadow: 2px 2px 4px #000000;
-		color: #700808;
-		font-size: 40px;
-	}
-
-	p{
-		padding: 0px 20px 10px 20px;
-		font-size: 16px;
-		justify-content:space-between ;
-		line-height: 18px;
-	}
-
-	h2{
-		background-color: #292323 ;
- 	 	padding: 5px 50px;
- 	 	color: whitesmoke;
-	}
-
-	.benchImgContainer{
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 10px;
-	}
-
-	.strutturaImgContainer{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 10px;
-		align-items: center;
-
-	}
-
-	.benchImgContainer img {
-	    max-width: 100%;
-	    height: auto;
-	    flex: 1 1 auto;
-	    object-fit: cover;
-	}
-
-
-	.strutturaImgContainer img {
-	    max-width: 100%;
-	    height: auto;
-	    flex: 1 1 auto;
-	    object-fit: cover;
-	}
-
-	.FromS{
-		font-weight: bold;	
-		font-style: italic;
-	}
-
-	.esempio{
-		font-style: italic;
-	}
-
-	.titolo{
-		font-weight: bold;	
-		font-style: italic;
-	}
-
-	.label {
-		text-align: center;
-	}
-
-    
-	.navbar{
-	    background-color: #3d4240;
-	    display: flex;
-	    flex-direction: row;
-	    padding: 10px 10px;
-	}   
-
-	.navbar a {
- 		color: white;
-  		padding: 10px 10px;
-  		text-decoration: none;
-  		font-size: 17px;
-  		border-radius: 5px;
-	}	
-
-
-	.navbar a:hover {
-	  background-color: #ddd;
-	  color: black;
-	}
-
-	.navbar a.active {
-	  background-color: #252927;
-	  color: white;
-	}
-
-
-
-
-	@media (max-width: 768px) {
-		body {
-			padding: 20px 40px; /* Ridurre i margini laterali */
-		}
-
-		.pagina {
-			padding: 5px 15px 15px 15px; /* Ridurre il padding */
-		}
-
-		h1 {
-			font-size: 28px; /* Ridurre la dimensione del font */
-		}
-
-		h2 {
-			font-size: 18px; /* Ridurre la dimensione del font */
-			padding: 5px 20px; /* Ridurre il padding */
-		}
-
-		p {
-			font-size: 14px; /* Aumentare la leggibilità su schermi piccoli */
-		}
-
-		.benchImgContainer{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 10px;
-
-		}
-
-		.strutturaImgContainer{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 10px;
-			
-		}
-
-
-		 .navbar{
-   			 flex-direction: column;
-		}   
-	
-
-</style>
 
 <body>
-	<div class="pagina">
-        <header>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Torna Su</button>
+    <header>
+	   	<div class="header-container">
+	   		<a href="index.html"><img src="IMG/Logo.png" width="200" height="100"></a>
+        </div>
+
         <div class="navbar">
         	<div class="navbar-left">
-            	<a class="active" href="index.html">Home</a>
+            	<a href="index.html">Home</a>
   				<a href="collezione.html">Collezione</a>
- 				<a href="ProjectPlan.html" class="nav-link">Project Management Plan</a>
+  				<a  class="active" href="#">Chi Siamo</a>
  			</div>
  			<div class="login-container">
     			<form action="/action_page.php">
@@ -196,48 +57,351 @@
         </div>
 
     </header>
-	<h1> WEB PROJECT PLAN</h1>
-	<h2> IDEA </h2>
-	<p class="idea">
-		L’ idea consiste nel realizzare un archivio digitale contenente parte delle OST (o meglio conosciute come Soundtrack - Traccie Musicali) della famosa casa di sviluppo di videogiochi <span class="FromS"> FromSoftware</span>. Gli utenti potranno ascoltare le tracce audio e associare a loro l'origine <span class="esempio">(ad esempio traccia di un combattimento con un boss, musica ambientale, traccia del titolo e menù di gioco)</span>. <br>
-		Le tracce saranno accompagnate da una corrispettiva immagine, qualche informazione sulla composizione e tema della canzone e qualche informazione o trivia aggiuntiva da leggere durante l'ascolto.
-		<br>
-		I titoli principali da cui saranno tratte le tracce saranno, inizialmente  <span class="titolo"> la trilogia di Dark Souls, Bloodborne ed Elden Ring </span>con l'obbiettivo di includere il resto delle opere in futuro.
-	</p>
+    
+    <div class="container-plan-nav">
+        <!-- Sidebar Navigazione / Pulsanti -->
+        <nav id="sidenav-plan">
+            <ul>
+            	<li><a href="#idea">IDEA</a></li>
+                <li><a href="#brief">BRIEF</a></li>
+                <li><a href="#benchamrk">BENCHMARK</a></li>
+                <li><a href="#struttura">STRUTTURA</a></li>
+                <li><a href="#layout">LAYOUT</a></li>
+                <li><a href="#usabilita">USABILITA'</a></li>
+                <li><a href="#servizi">SERVIZI</a></li>
+                <li><a href="#bibliografia">BIBLIOGRAFIA</a></li>
+            </ul>
+        </nav>
+     </div>
+        <!-- Contenuto Principale -->
+        <main id="pagina-plan">
+        	<h1> WEB PROJECT PLAN</h1>
+            <section id="idea">
+                <h2>IDEA</h2>
+                <p>L’ idea consiste nel realizzare una collezione digitale e allo stesso tempo una galleria, contenente le OST di parte dei giochi della casa di sviluppo FromSoftware.</p>
+            </section>
+            <section id="brief">
+                <h2>BRIEF</h2>
+                <h3>1 .1 Finalità e obbiettivi del progetto</h3>
+                <p>Lo scopo del sito è di raggruppare in un unico ambiente dedicato le OST delle varie serie videoludiche di FromSoftware. Ciò esclude, almeno nell’idea iniziale, la presenza di tracce al di fuori di tale casa. 
+					Più in dettaglio, le ost presenti appartengono al mondo “Soulsborne” il quale comprende i giochi del genere souls (introdotto con gli omonimi titoli Demon’s Souls -2009-  e Dark Souls -2011) assieme ai “fratelli” Bloodborne, Sekiro:Shadow Die Twice, Elden Ring”.  <br>
+					Come da idea, il sito vuole essere, oltre che un archivio digitale, lettearlmente una collezione ed una galleria. Allo stessemo modo di come possa essere possedere una collezione fisica di dischi, si vuole dare all’utente la possibilità di accedere a tali tracce in maniera rapida e visiva, allo stesso modo in cui fisicamente si sceglie qualcosa da ascoltare per la prima volta basandosi sulla copertina (di un album o di una canzone)
+					Contemporaneamente, si vuole ridurre al minimo la presenza di scritte, testi intrusivi o menù complessi e labirintici. Si vuole fornire l’esperienza che si avrebbe possedendo tale collezione fisicamente, la quale si desidera anche esporre magari in una vetrina.<br>
+					Le tracce inoltre, a livello di pagina dell’itema, presenteranno anche una breve descrizione della traccia e del soggetto, come le emozioni scaturite, gli obbiettivi del compositore, gli strumenti, chi è il soggetto trattato nella ost ed il suo scopo nella trama. Tali descrizioni non vogliono essere un’ enciclopedia e nemmeno una guida al gioco ma un semplice aiuto per l’interpretazione e lettura della traccia, allo stesso modo in cui in un museo, sotto un quadro esposto, vi è una breve descrizione.<br>
+					Infine, per migliorare l’esperienze e l’immersività, si propone, sempre nella pagina item, uno sfondo rappresentatitvo e, se l’utente lo desidera, un video che può far partire, a sostegno dell’ascolto e della comprensione. (ad esempio, se la traccia è la ost di una boss fight, il video riguarderà il combattimento con tale boss).
+				</p>
+				<h3>1 .2 Pubblico di riferimento</h3>
+				<p>Il target di tale sito non è specifico, chiunque può accedervi. Non ci sono vincoli d’età o genere. Dato però il tema, è chiaro che il focus sarà sugli appassionati di videogiochi e musica (in particolare appassionati dei 		giochi trattati). Non si vuole precludere però l’accesso e chi non fa parte di nessuno di questi gruppi. Anche chi è capitato sul sito per caso (ad esempio, ascoltando per caso una ost su siti come youtube, per poi cercare 		altre, si è trovato tale sito) può trovare in tale sito un'opportunità per scoprire nuove colonne sonore, approfondire il proprio interesse per la musica videoludica o semplicemente esplorare un archivio di brani iconici. 		L'obiettivo è offrire un'esperienza accessibile e coinvolgente, indipendentemente dal livello di familiarità con i giochi trattati o manualità tecnologica
+				</p>
+				<h3>1 .3 Accesso alla risorsa</h3>
+				<p>L'accesso sarà principalmente tramite sito web, da browser, e futuramente anche tramite app, senza vincoli di piattaforma o strumento (pc, smartphone, tablet ecc) e non richiederà nessun accesso obbligatorio. Sarà possibile però creare un account in modo da poter rimanere aggiornati su nuove pubblicazioni, aggiungere tracce ai preferiti per un più comodo accesso, votare ciò che si ascolta in modo da creare una classifica pensata per filtrare la collezione e fornire, anche a chi non è esperto dell’ambiente, la possibilità di trovare immediatamente i brani più popolari e ciò che piace alla comunity.<br>
+				Il media principale per la comunicazione ed esplorazione della collezione prevede immagini, video ed audio con enfasi sull’accessibilità e facilità d’uso (anche da cellulare o schermi piccoli)
 
-	<h2> BRIEF </h2>
-	<p class="brief">
-		Lo scopo della raccolta è di raggruppare in un unico ambiente dedicato le OST delle varie serie videoludiche di FromSoftware in un unico ambiente in modo che appassionati e non possano ascoltarle. Uno degli obbiettivi è fornire qualche informazione aggiuntiva sulla traccia, qualche dettaglio sull'azienda e immagini esplicative da associare, in modo che i fan possano ritrovarsi in ciò che ascoltano mentre, per chi non conosce le opere, potervisi immergere e comprendere maggiormente gli scopi di tali musiche e pensiero dell'azienda.
-		<br>
-		Il target di tale sito non è specifico, chiunque può accedervi. Essendo però incentrato sulla musica e videogiochi, è chiaro che i principali visitatori potrebbero essere gli appassionati del genere videoludico o della casa sviluppatrice o amanti dei videogiochi in generale. Anche gli esperti di musica o i neofiti, o magari qualche studioso che sta studiando il genere o il fenomeno vediogiochi-musica potrebbero trovare un ambiente adatto.
-		<br>
-		L'accesso sarà principalmente tramite sito web, da browser, senza vincoli di piattaforma o strumento <span class="esempio"> (pc, smartphone, tablet ecc)</span> e non richiederà nessun accesso obbligatorio. Sarà possibile però creare un account in modo da poter rimanere aggiornati su nuove pubblicazioni, contribuire all'aggiornamento della libreria e poter partecipare a discussioni riguardanti le  opere e persino votare le proprie preferito in modo da creare una classifica.
-		<br>
-		I contenuti usati sono reperibili in rete <span class="esempio">(ad esempio youtubte)</span> e sono principalmente immagini e file audio.
-	</p>
-	<h2> BENCHMARK </h2>
-	<p class="benchmark">
-		Attualmente siti di questo genere non ne esistono. I più simili e vicini all'argomento trattato sono siti più generici che comprendono raccolte di vari videogiochi ed opere come <span class="titolo">Video Game Music</span> oppure siti di E-commerce in cui vendere le colonne sonore fisicamente quali <span class="titolo">Discogs, FromSoftware o Bandai</span>. Ci sono infine le sempreveredi piattaforme come <span class="titolo"> Youtube, Spotify, SoundCloud</span>. Gli elementi che accomunano questi siti sono una zona di navigazione che permette la ricerca per categoria o album. Tematicamente i colori sono vari, soprattutto se prendiamo in conto anche altri siti che trattano di musica. Ma se si guarda nel dettaglio, tra quelli che trattano di FromSoftware (come il proprio sito), i colori predominanti sono il nero, con temi più cupi, date le tematiche di cui trattano i videogiochi corrsipondenti.
-		<br>
-		<div class="benchImgContainer"> 
-		<img src="projectIMG/Bench1.png" class="immagineBench" height="450" width="650 ">
-		<img src="projectIMG/Bench2.png" class="immagineBench" height="450" width="650 ">
-		<img src="projectIMG/Bench4.png" class="immagineBench" height="450" width="650 ">
-		<img src="projectIMG/Bench6.png" class="immagineBench" height="450" width="650 ">
-		</div>
-		<br>
-		WIP
-	</p>
+				</p>
+            </section>
+      		<section id="benchamrk">
+                <h2>BENCHMARK</h2>
+                <h3>2 .1  Analisi di mercato</h3>
+				<p>Attualmente siti che trattano esclusivamente colonne sonore FromSoftware non ce ne sono o sono molto difficili da ritrovare . I più simili e vicini all'argomento trattato sono più generici, che comprendono raccolte di vari videogiochi ed opere come “KHInsider, VGMusic OverClocked ReMix, ” oppure siti di E-commerce in cui vendere le colonne sonore fisicamente quali “Discogs, FromSoftware o Bandai- ufficiali”. Ci sono infine le sempreveredi piattaforme come Youtube, Spotify, SoundCloud ma che non offrono l’esperieza di una collezione. Sempre legati all’argomento FromSoftware ci sono anche siti e content creator che trattano l’argomento, sotto forma di gameplay, guide e wiki ma che hanno poco a che vedere con le tracce musicali nello specifico oppure canali che trattano di musica o reaction che, oppositamente, non sono legati esclusivamente all’ambiente FromSoftware.<br>
+				I siti più simili all’idea trattano l’argomento genericamente o solo marginalmente, tralasciando uno o l’altro aspetto. Non aiuta il fatto che molti di questi siti sono molto datati (VGMusic ad esempio è del 1996) con layout molto antiquato, elementi non aggiornati e che spesso non sono pensati per l’utilizzo da mobile o più semplicemente con schermi diversi.<br>
+				Per questo motivo, l’esistenza di un sito, che raccoglie in un solo luogo tali mondi, possa portare nuove persone a conoscere ognuno l’altro, con elementi moderni, facile da utilizzare, che possa attirare subito l’occhio e sia responsive ed indipendente dalla piattaforma.
+				</p>
+				<h3>2 .2 .1 Servizi</h3>
+				<p>Tali siti utilizzano per la maggior parte un’interfaccia molto caotica e piena di elementi, per lo più testuali e ipertestuali con molta enfasi sul alto database e poco attraente dal lato visivo. Si concentrano molto sul categorizzare le opere, principalemente per gioco, piattaforma (ad esempio Switch, PS1, PC..), compagnia videoludica (Sony, Nintendo, Sega…), alfabeticamente (tramite filtri), per data o tramite semplice ricerca. <br>
+				Presentano anche elementi social, permessi dal possedere un account, che consentono di lasciare commenti, favorire tracce, creare playlist e altro.<br>
+				Per alcuni è anche presente la possibilità di scaricare ciò che si ascolta.
+				</p>
+				<h3>2 .2 .2 Elementi ripresi ed inediti</h3>
+				<p>Alcuni elementi ripresi per il progetto sono i filtri di ricerca per gioco, genere e comunity (poplarità), la sezione della descrizione del brano ed i dati, un video player da supporto al alto audio (ma che non deve essere il focus).<br>
+				Elementi invece inediti o marginalmente presenti negli altri siti che sono stati utilizzati sono il prevalente utilizzo di immagini dedicate ai brani piuttosto che testi, focus sull’accessibilità e facilità d’uso su qualsiasi piattaforma, lato comunity meno social, ma più di sostegno, che permette il voto e le preferenze a scopo di filtro per i neofiti.  L’utilizzo di colori inoltre è stato scelto appositamente, assieme al font, per riprendere i titoli trattati.<br>
+				Infine, si è voluto riprendere la possibilità di “promozione” da alcuni di questi siti, mettendo in mostra canali, siti e persone che si occupano di tale mondo.
+				</p>
+				<h3>2 .3 Concorrenti</h3>
+				<h3><a href="https://downloads.khinsider.com/"target="_blank">3 .3 .1 KHInsider</a></h3>
+				<p>Il sito presenta un layout esclusivamente verticale, con l’assenza di un header o footer. Il logo situato nella sidenav che funge anche da sezione filtri per il sito e modalità di accesso al proprio account. Il resto del corpo del sito è formato per la maggior parte da una lunga lista delle ultime aggiunte. Alla collezione completa si arriva tramite il filtro “Browse All” degli album. Visivamente è molto datato, con colori principalmente azzurro per la sidenav e grigio per il body (oppure blu e nero nella modalità scura) e una predominanza di elementi testuali. <br>
+				Il lato visino è molto scarno, con le immagini relativi ai giochi o alle ost molto ristrette. I filtri e la ricerca sono efficaci, e la pagina della collezione completa è facilmente accessibile, ma il fattore database, nuovamente rovina l’esperienza a chi cerca qualcosa di più immediato. Infatti, una semplice ricerca per titolo, ad esempio “Dark Souls” mostra molte risposte dato che viene fornite un risultato per ogni volta che tale album sonoro è stato rilasciato, portando confusione ai meno esperti chiedendosi se ci sono differenze. <br>
+				Anche le pagine degli item sono molto spoglie con attenzione sulla funzionalità. Le informazioni (metadati) sono per lo più presenti e comprensivi. Molto utile la funzione per il download o la sezione correlati, che mostra gli album più ascoltati dagli appassionati che hanno visitato l’item attuale.
+				</p>
 
-	<h2> STRUTTURA </h2>
-	<p class="struttura">
-		<div class="strutturaImgContainer">
-		<label class="label"> Mappa Concettuale</label>
-		<img src="projectIMG/MappaConcettuale.png" class="immagineStruttura">
-		<label class="label"> Schema - Gerarchia</label>
-		<img src="" class="immagineStruttura">
+				<h3><a href="(https://ocremix.org/"target="_blank">3 .3 .2 OcRemix </a></h3>
+				<p>Il sito ha uno stile più moderno del precedente, con colori più accesi che attirano subito l’occhio, come l’arancione, blu e bianco. Il layout è più pulito ma rimangono comunque molto presenti gli elementi testuali e ipertestuali. Sono presnti sia l’header (che comprende oltre il logo, anche la navigazione e il lato social) ed il footer.<br>
+				Il corpro principale è composto a destra da una sidebar, che mostra gli ultimi singoli rilasciati, e per il resto da varie sezioni che forniscono una preview di alcuni item (tramite slideshow), della comunity e della collezione.<br>
+				E’ possibile tramite la navigazione nel header accedere alla collezione filtrando anche per gioco, musica o persone (autori). Il sito permette inoltre, dato il focus dei “Re Mix”, la possibilità a chiunque di caricare sul sito le loro creazioni. <br>
+				Cercando tramite barra di ricerca, ad esempio, “Dark Souls” si ottiene una lista di item che comprendono tale titolo nel nome (gioco di base da cui sono remixati i brani) ma che non permettono la rapida comprensione dell’elemento dato nuovamente il focus sul testo (anche se l’elemento cercato è evidenziato), ma ciò che distingue veramente i singoli item (titolo proprio o un’immagine) sono messi in seconodo piano. <br>
+				Le pagine item dei brani presentano un videoplayer per visualizzare il brano ma è completamente staccato dalla traccia ed è più un elemento visivo si sfondo o pubblicitario verso il sito stesso. Molto utile. anche in queto caso, la funziona download, e la presenza di di una ricerca per tag, in modo da trovare tracce simili a quella che sis ta scoltando. <br>
+				Molto dettagliata anche la sezione dei dati, situata nella tendina Details e la sezione comunituy, che permette oltre ai soliti commenti, anche la possibilità dell’autore di scrivere informazioni aggiuntive sulla creazione del brano a formare una sorta di “descrizione”.</p>
+
+
+            </section>
+            <section id="struttura">
+                <h2>STRUTTURA</h2>
+                <h3>3 .1 Mappa concettuale</h3>
+                <img src="ProjectIMG/MappaConcettuale.png" width="100%" height="100%" alt="Mappa Concettuale">
+                <h3>3 .2 Schema dipendenze</h3>
+                <img src="ProjectIMG/SchemaDipendenze.png" width="100%" height="100%" alt="Mappa Concettuale">
+                <h3>3 .3 Categorie</h3>
+                <p>
+             <table border="1">
+			    <thead>
+			        <tr>
+			            <th>Categoria</th>
+			            <th>Descrizione</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td rowspan="2">DC.title</td>
+			            <td>Titolo Sito</td>
+			        </tr>
+			        <tr>
+			            <td>Titolo Opera / Traccia</td>
+			        </tr>
+			        <tr>
+			            <td rowspan="2">DC.Creator</td>
+			            <td>Creatore Sito</td>
+			        </tr>
+			        <tr>
+			            <td>Autore Traccia</td>
+			        </tr>
+			        <tr>
+			            <td rowspan="2">DC.Subject</td>
+			            <td>Argomento Sito</td>
+			        </tr>
+			        <tr>
+			            <td>Argomento Traccia</td>
+			        </tr>
+			        <tr>
+			            <td>DC.Publisher</td>
+			            <td>Fornitore / Web hosting</td>
+			        </tr>
+			        <tr>
+			            <td rowspan="2">DC.Date</td>
+			            <td>Data creazione sito</td>
+			        </tr>
+			        <tr>
+			            <td>Data rilascio traccia</td>
+			        </tr>
+			        <tr>
+			            <td rowspan="5">DC.Type</td>
+			            <td>Elementi presenti nel sito e negli item</td>
+			        </tr>
+			        <tr><td>Video</td></tr>
+			        <tr><td>Immagini</td></tr>
+			        <tr><td>Audio</td></tr>
+			        <tr><td>Testo</td></tr>
+			        <tr>
+			            <td rowspan="7">DC.Format</td>
+			            <td>Formato degli elementi</td>
+			        </tr>
+			        <tr><td>.html</td></tr>
+			        <tr><td>.css</td></tr>
+			        <tr><td>.js</td></tr>
+			        <tr><td>.jpg</td></tr>
+			        <tr><td>.png</td></tr>
+			        <tr><td>.mp3 / .mp4</td></tr>
+			        <tr>
+			            <td rowspan="2">DC.Identifier</td>
+			            <td>Link pagina sito</td>
+			        </tr>
+			        <tr>
+			            <td>Link pagina item</td>
+			        </tr>
+			        <tr>
+			            <td>DC.Language</td>
+			            <td>Lingua del sito: IT</td>
+			        </tr>
+			        <tr>
+			            <td>DC.Rights</td>
+			            <td>Diritti e licenza</td>
+			        </tr>
+			        <tr>
+			            <td rowspan="7">data-gioco</td>
+			            <td>Gioco di provenienza</td>
+			        </tr>
+			        <tr><td>Demon’s Souls</td></tr>
+			        <tr><td>Dark Souls I</td></tr>
+			        <tr><td>Dark Souls II</td></tr>
+			        <tr><td>Dark Souls III</td></tr>
+			        <tr><td>Bloodborne</td></tr>
+			        <tr><td>Sekiro / Elden Ring</td></tr>
+			        <tr>
+			            <td rowspan="6">data-genere</td>
+			            <td>Genere di OST</td>
+			        </tr>
+			        <tr><td>Boss Fight</td></tr>
+			        <tr><td>Ambientale / Zona</td></tr>
+			        <tr><td>Endings</td></tr>
+			        <tr><td>Title Screen</td></tr>
+			        <tr><td>Dungeon / Extra / Cut Content</td></tr>
+			        <tr>
+			            <td rowspan="2">data-durata</td>
+			            <td>Durata tracce</td>
+			        </tr>
+			        <tr><td>Minuti / Secondi</td></tr>
+			    </tbody>
+			</table>
+
+
+                </p>
+            </section>
+            <section id="layout">
+                <h2>LAYOUT</h2>
+                <h3>4 .1 Layout</h3>
+                <div class="layout-images">
+                	<label>Homepage<img src="ProjectIMG/Layout_home.png"  alt="Layout Homepage"></label>
+                	<label>Collezione<img src="ProjectIMG/Layout_collection.png"  alt="Layout Collezione"></label>
+                	<label>Overlay<img src="ProjectIMG/Layout_overlay.png"  alt="Layout Overlay"></label>
+                	<label>Item<img src="ProjectIMG/Layout_item.png"  alt="Layout Item"></label>
+				</div>	
+                <h3>4 .2 Wireframe</h3>
+                <div class="layout-images">
+                	<label>Homepage<img src="ProjectIMG/Wire_home.jpg"  alt="Wireframe Homepage"></label>
+                	<label>Collezione<img src="ProjectIMG/Wire_collection.jpg"  alt="Wireframe Collezione"></label>
+                	<label>Overlay<img src="ProjectIMG/Wire_overlay.jpg"  alt="Wireframe Overlay"></label>
+                	<label>Item<img src="ProjectIMG/Wire_item.jpg"  alt="Wireframe Item"></label>
+				</div>	
+                
+            </section>
+            <section id="usabilita">
+                <h2>USABILITA'</h2>
+                <h3>5 .1 Architettura</h3>
+                <p>L’architettura del sito è progettata per garantire una navigazione intuitiva e una struttura logica dei contenuti.<br>
+				In tutte le pagine è presente sia la sezione header, comprensivo di logo (dal quale si può ritornare sempre alla homepage), una sezione per la navigazione e la sezione per il log in, sia il footer con tutte le informazioni utili come i contatti, i social e i diritti.<br>
+				La home page funge, come dai giochi a cui è ispirata, da hub centrale. Non vi è un sistema di navigazione immediato ma è più uno strumento visivo. Il corpo principle della homepage è diviso in varie sezioni, facilmente distinguibili, e interattive al passaggio del mouse. Tramite un sistema di card, composto da immagini e overlay, al passaggio del mouse, che mostra informazioni aggiuntive, si può giungere alla collezione, ad item specifici o a scoprire siti esterni correlati.<br>
+				Le sezioni nella hompage sono costituite da flex box, che permettono un’adattabilità responsiva al cambiamento dello schermo, in base alla disposizione in colonna o riga.<br>
+				Tramite la barra di navigazione si giunge alla pagina della collezione, la quale, data la sua funzione, è composta a schermo da una sola parte: una grid box per l’esposizoine dei vari elementi ed un sistema di paginazione. Sempre tramite passaggio del mouse, con overlay, è possibile ottenere informazioni aggiuntive sui singoli item, permettendo inoltre il click immediato (o tocco da dispositivi mobili) sull’elemento per accedere alla pagina specifica.<br>
+				Questa volta è presente un sistema di navigazione. Tramite un pulsante (button) in parte fuori dall schermo, che mostra inizialmente solo l’icona della lente d’ingrandimento (in modo che sia comprensibile dato il vasto utilizzo di tale icona per questa funzione), è possibilme, sempre tramite hover, mostrare il pulsante intero che, se premuto, fa comparire una full-screen navigation. Essa è composta da un sistema di ricerca primario, dove basta digitare il nome dell’elemento che si desidera, e la lista in sottfonodo si aggiorna automaticamente, e un sistema di filtri per gioco, genere e comunity. Sia in questa pagina che nella home page, vi è un pulsante per ritornare in cima, che compare dopo avere navigato un po’ nella pagina.<br>
+				Tali elementi (pulsanti) sono stati inseriti in maniera non invasiva (ma comunque fixed) in modo da mettere in risalto l’elemento visivo degli item. Nello stesso modo è stata pensata anche la barra di scorrimento laterale, la quale, adottando sempre uno stile interattivo di hover, scompare al rimpiciolirsi dello schermo in modo da non limitare lo spazio disponibile.<br>
+				Infine, si giunge all’elemento item. Il suo corpo è composto principalmente da due contenitori. Un contenitore è adibito ai media, ovvero il video-player (sul quale non è permesso fare altro se non metterlo in pausa o farlo partire) e audio-player, con sfondo un’immagine relativa alla ost in ascolto, mentre il secondo contentenitore comprendere dei collapsible per la descrizione ed i dati (a loro volta formati da una tabella).<br>
+				La pagina item comprende però, anche le breadcrumbs come navigazione, in modo fornire all’uttente, magari meno esperti dell’argomento, un modo per riconoscere in che sezione / gioco si stanno trovando, in qualsiasi item stiano navigando.<br>
+				Infine, tramite una flexbox, è presente un sistema di voto e preferenze, tramite click sulle icone nel caso l’utente sia collegato altrimenti fa comparire da fuori schermo, un messaggio di avviso / notifica che bisogna collegarsi.<br>
+				I layout sono stati pensati per la rapidità d’utilizzo, l’impatto visivo e l’accessibilità indipendentemente dalla grandezza dello schermo, favorendo un numero limitato di elementi a schermo in ogni sezione piuttosto che un sovraffollamento.<br>
+				</p>
+				<h3>5 .2 Aspetto e tipografia</h3>
+				<p>Lo stile utilizzato è moderno e minimale, con pochi elementi, soprattutto testuali, per favorire la navigazione da qualsiasi piattaforma senza richeidere all’utente di leggere numerose righe di testo o doverne inserire in delle textbox. Gli elementi d’interfaccia utilizzati principalmente sono la navbar, pulsanti leggermente arrotondati e le immagini, con un feedback e interazione al passaggio del mouse di overlay, ingrandimento, zoom, cambio colore e persino transizioni (il più fluide possibile) e notifiche.</p>
+				<h3>5 .3 Colori, icone e font</h3>
+				<p>I colori principali del sito seguono quelli più comuni nella palette cromatica dei giochi di from software con un uso predominante del bianco e nero per i contrasti, varie sfumature di grigio e con degli elementi interattivi con un colore rosso scuro / marrone. Lo sfondo è stato creato usando questi colori, assieme anche alla barra di scorrimento, tramite una sfumatura, chiara ai bordi e scura al centro, per mettere in risalto gli elementi e dare una linea di lettura della pagina, in modo da guidare l’attenzione verso il centro. <br>
+				<b>#838E88 </b>(grigio chiaro)  /  <b>#43484E</b> (grigio medio)  /  <b>#322E2D</b> (grigio scuro)  /  <b>#56220C</b> (rosso-mattone)  /  <b>#823E21</b> (rosso-mattone chiaro)<br>
+				<img src="ProjectIMG/colorPalette.jpg" width="300px" height="auto" alt="Palette di colori" class="palette"><br>
+				A tale scopo le scritte sono per la maggior parte bianche per favorirne la lettura, con una dimensione abbastanza elevata per i titoli e più piccola per gli elementi come le descrizioni o la tabella dei dati. Il font utilizzato è “OptimusPrinceps” che segue lo stile di molte opere, come la trilogia dark souls, nonché lo stile fantasy medioevale che funge da base per le opere.</p>
+            </section>
+            <section id="servizi">
+                <h2>SERVIZI</h2>
+                <h3>6 .1 Browsing aggiuntivo</h3>
+                <p>Oltre ai tradizionali canali di navigazione, è possibile introdurre funzionalità avanzate per migliorare l’esperienza utente e facilitare l’esplorazione della collezione di colonne sonore.<br>
+				Una delle soluzioni è l’integrazione di Playlist Dinamiche, che vengono generate automaticamente in base a temi specifici, come battaglie contro i boss, ambientazioni silenziose o momenti particolarmente drammatici. Questo sistema permette agli utenti di immergersi in un’esperienza d’ascolto coerente con le proprie preferenze o il proprio stato d’animo. <br>
+				Un altro strumento utile è la Tag Cloud, un sistema di navigazione basato su parole chiave che si adattano dinamicamente in base alla loro rilevanza. Le etichette più utilizzate o ricercate verranno visualizzate in dimensioni maggiori, facilitando un’esplorazione immediata e intuitiva delle OST disponibili.<br>
+				Infine, per offrire un’esperienza ancora più personalizzata, si può implementare un sistema di Suggerimenti Basati sull’Ascolto, che utilizza un algoritmo per proporre tracce simili a quelle già cercate o riprodotte dall’utente. Questo strumento consente di scoprire nuove OST affini ai propri gusti, rendendo la fruizione del catalogo più ricca e coinvolgente.
+				</p>
+				<h3>6 .2 Utilities e tool per la navigazione</h3>
+				<p>Per migliorare l’esperienza di navigazione e valorizzare l’accesso alle colonne sonore, è possibile integrare diversi strumenti interattivi. <br>
+				Uno di questi è l’Audio Preview Player, un lettore integrato che consente di ascoltare un’anteprima delle OST senza la necessità di aprire la pagina dedicata. Questo permette agli utenti di valutare rapidamente una traccia prima di accedere ai dettagli completi. <br>
+				Un altro strumento essenziale è la Modalità Notturna, un’interfaccia a tema scuro progettata per migliorare la leggibilità e creare un’atmosfera più immersiva, riducendo l’affaticamento visivo durante l’ascolto prolungato. <br>
+				Per garantire una maggiore personalizzazione, si prevede l’implementazione di un sistema di Download e Creazione di Playlist Personalizzate, che consente agli utenti di selezionare le proprie OST preferite, organizzarle in playlist tematiche e scaricarle per un ascolto offline. <br>
+				Un ulteriore elemento di valorizzazione dell’accesso è la Soundtrack Timeline, un’interfaccia interattiva che visualizza le colonne sonore nel contesto della progressione del gioco. Attraverso questa funzionalità, l’utente può identificare il momento esatto in cui una traccia viene riprodotta all’interno del titolo di riferimento, comprendendone meglio il significato narrativo e l’impatto emotivo. <br>
+				Per incentivare l’esplorazione del catalogo, è possibile integrare un Generatore di OST Casuali, che permette di riprodurre una traccia in modo casuale. Questa funzione può essere arricchita con filtri specifici, come la selezione di brani legati esclusivamente alle battaglie contro i boss, alle aree di gioco o ai momenti particolarmente evocativi, offrendo agli utenti un’esperienza di scoperta più dinamica. <br>
+				Infine, la Modalità Immersiva Full-Screen consente di trasformare il sito in un vero e proprio lettore musicale a schermo intero, con la possibilità di integrare sfondi dinamici ispirati ai giochi. Questa funzione mira a rendere l’ascolto più coinvolgente, creando un ambiente adatto sia alla concentrazione che al relax.
+				</p>
+				<h3>6 .3 Strumenti di valorizzazione</h3>
+				<p>Per migliorare ulteriormente l’esperienza di fruizione delle colonne sonore, è possibile integrare strumenti e funzionalità avanzate che arricchiscano l’accesso ai contenuti e favoriscano l’esplorazione dell’archivio musicale.<br>
+				Un primo elemento chiave è l’integrazione con Spotify e YouTube, che consente agli utenti di ascoltare versioni ufficiali o orchestrali delle OST direttamente dalle piattaforme di streaming, offrendo un accesso immediato a esecuzioni alternative e di alta qualità.<br>
+				Per mantenere il pubblico aggiornato sulle nuove aggiunte, è possibile implementare un sistema di notifiche per nuovi contenuti, che avvisi gli utenti tramite email o notifiche del browser ogni volta che vengono pubblicate nuove colonne sonore o aggiornamenti rilevanti.<br>
+				Un’idea innovativa è l’inserimento di Easter Eggs e contenuti sbloccabili, come concept art inediti o interviste ai compositori, accessibili solo dopo aver esplorato determinate OST. Questo meccanismo incentiva l’interazione e rende la piattaforma più coinvolgente.<br>
+				Per offrire una navigazione più approfondita, si possono introdurre filtri avanzati, che permettono di esplorare le OST in base a criteri specifici, come lo strumento musicale predominante, il tempo della composizione o l’intensità emotiva del brano.<br>
+				Infine, per arricchire ulteriormente l’esperienza d’ascolto, ogni colonna sonora potrebbe includere una sezione dedicata all’integrazione con il lore, offrendo dettagli sul contesto narrativo e il significato della traccia all’interno del gioco. Questo permetterebbe agli utenti di comprendere meglio il legame tra musica e storia, valorizzando l’impatto emotivo di ogni composizione.
+				</p>
+            </section>
+            <section id="bibliografia">
+                <h2>BIBLIOGRAFIA</h2>
+                <p>Di seguito sono elencate le fonti utilizzate per la realizzazione del progetto, suddivise per tipologia di contenuto.</p>
+                <h3>7 .1 Testi - descrizioni ost</h3>
+                <p>Intelligenza artificiale e conoscenze proprie. Poca presenza di tali informazioni in rete.</p>
+                <h3>7 .2 Immagini ed eventuali risorse multimediali</h3>
+                <p>Immagini, principalmente fanart, da siti come <a href="https://www.artstation.com/?sort_by=community&dimension=all" target="_blank">ArtStation</a>  e <a href="https://wall.alphacoders.com/"target="_blank">WallpaperAbyss</a>, video da canali youtube come  <a href="https://www.youtube.com/@Shirrako"target="_blank">Shirrako</a>, <a href="https://www.youtube.com/@BossFightDatabase"target="_blank">BossFightDatabase</a>, <a href="https://www.youtube.com/@CrestfallenYT"target="_blank">CrestfallenYT</a>, <a href="https://www.youtube.com/@Ivarov023"target="_blank">Ivarov023</a> e file audio da <a href="https://downloads.khinsider.com/"target="_blank">KHInsider </a></p>
+                <h3>7 .3 Strumenti e tool utilizzati</h3>
+                <p>Software di sviluppo web: HTML, CSS, JavaScript per la realizzazione della piattaforma.<br>
+					Framework e librerie: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+					per le icone<br>
+					Piattaforme di hosting: GitHub per la pubblicazione del sito.<br>
+					Canva per le mappe e la struttura<br>
+					 Mirò per i Wireframes<br>
+					</p>
+                <h3>7 .4 Applicazioni e componenti diverse</h3>
+                <p>Link esterni a siti e canali youtube che trattano dell’argomento come inegrazione e curiosità:<br>
+                <a href="https://www.fromsoftware.jp/ww/"target="_blank">FromSofware</a><br>
+                <a href="https://www.wiki.fextralife.com/"target="_blank">FextraLife</a>(Wiki di vari giochi molto conosciuta nella comunity) <br>
+                <a href="https://www.youtube.com/@SabakuNoStreamer"target="_blank">Sabaku</a>(maggiore esperto in Italia del mondo FromSoftware e molto conosciuto anche all’ester)<br>
+                <a href="https://www.youtube.com/@VaatiVidya"target="_blank">VaatiVidia</a>(Probabilmente il canale youtube più conosciuto al mondo per quanto riguarda la lore, narrazione ed il mondo dei giochi From)<br>			
+				</p>
+            </section>
+        </main>
+    
+    <footer class="footer-container">
+		<div class="contatti">
+			<div class="link-contatti">
+				<p class="tipo-contatto"></p>
+				<p class="contatto">Narcis Bugan a.a 2024/2025</p>
+			</div>
+			<div class="link-contatti">
+				<p class="tipo-contatto">Cellulare:</p>
+				<p class="contatto">+39 318 149 8810 </p>
+			</div>
+			<div class="link-contatti">
+				<p class="tipo-contatto">Mail:</p>
+				<p class="contatto">FromSoftOST@gmail.com</p>
+			</div>
+			<div class="link-contatti">
+				<p class="tipo-contatto">Indirizzo:</p>
+				<p class="contatto">Bologna, via Grande Torre 1</p>
+			</div>
 		</div>
-	</p>
-	</div>
+		<div class="social">
+			<div class="link-social">
+				<a href="#" class="fa fa-facebook"></a>
+				<p class="nome-social">Facebook </p>
+			</div>
+			<div class="link-social">
+				<a href="#" class="fa fa-twitter"></a>
+				<p class="nome-social">Twitter / X </p>
+			</div>
+			<div class="link-social">
+				<a href="#" class="fa fa-youtube"></a>
+				<p class="nome-social">Youtube </p>
+			</div>
+			<div class="link-social">
+				<a href="#" class="fa fa-instagram"></a>
+				<p class="nome-social">Instagram</p>
+			</div>
+		</div> 
+		<div class="altri-link">
+			<a href="ProjectPlan.html" class="project-link">Web Project Plan</a>
+			<p>F.A.Q</p>
+			<p>Licenza Creative Commons</p>
+			<p>Diritti d'uso</p>
+			<p>Cookie & Dati personali</p>
+		</div>
+	</footer>
+	<script>
+
+
+	      // Get the button:
+	        let mybutton = document.getElementById("myBtn");
+
+	        // When the user scrolls down 20px from the top of the document, show the button
+	        window.onscroll = function() {scrollFunction()};
+
+	        function scrollFunction() {
+	          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+	            mybutton.style.display = "block";
+	          } else {
+	            mybutton.style.display = "none";
+	          }
+	        }
+
+	        // When the user clicks on the button, scroll to the top of the document
+	        function topFunction() {
+	          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	        }
+	  </script>
 </body>
 </html>
