@@ -1,11 +1,4 @@
-/* --  COLORI --
-#838E88 (grigio chiaro)
-#43484E (grigio medio)
-#322E2D (grigio scuro)
-#56220C (rosso-mattone)
-*/
-
-
+/* ---------- FONT ---------- */
 @font-face {
     font-family: 'OptimusPrinceps';
     src: url('OptimusPrinceps.woff2') format('woff2'),
@@ -15,7 +8,6 @@
     font-display: swap;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -23,32 +15,29 @@
     font-family: OptimusPrinceps, serif ;  
 }
 
-
+/* ---------- SCROLL BAR ---------- */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
-  background-color: black;
+    background-color: black;
 }
  
 
 ::-webkit-scrollbar-button{
-     background: #322E2D; 
-     color: black;
-
+    background: #322E2D; 
+    color: black;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #43484E; 
-  border-radius: 12px;
+    background: #43484E; 
+    border-radius: 12px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: white; 
+    background: white; 
 }
 
 
@@ -57,18 +46,17 @@ main, body{
      black, black, black, black, #322E2D,#43484E,#838E88);
 }
 
-
 footer{
     float: bottom;
     margin: 0;
     padding: 0;
-   
 }
 
 header{
     display: block;
 }
 
+/* ---------- NAVBAR NEL HEADER ---------- */
 .header-container{
     display: flex;
     flex-wrap: wrap;
@@ -99,7 +87,6 @@ header{
 
 }
 
-
 .navbar-left a:hover {
   background-color: white;
   color: black;
@@ -110,6 +97,7 @@ header{
   color: white;
 }
 
+/* ---------- SEZIONE LOGIN NEL NAVBAR ---------- */
 .login-container{
     display: flex;
     flex-direction: row;
@@ -118,8 +106,6 @@ header{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
-
 
 .navbar input[type=text], input[type=password] {
     padding: 12px;
@@ -150,6 +136,8 @@ header{
     font-size: 50px;
 }
 
+
+/* ---------- SEZIONI HOMEPAGE ---------- */
 .titolo{
     font-size: 50px;
 }
@@ -157,6 +145,12 @@ header{
 .sottotitolo{
     margin-top: 5px;
     font-size: 20px;
+}
+
+.home-seleziona{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .ultime-aggiunte{
@@ -198,7 +192,7 @@ header{
       transform: scale(1.25);  
 }
 
-.disclaimer {
+.disclaimer{
     text-align: center;
     font-size: 14px;
     color: white;
@@ -237,8 +231,7 @@ header{
     box-shadow: 5px 4px 6px #838E88;
 }
 
-/*#85700b,#52460c,#2b2504,#cfb43e */
-
+/* ---------- CONTENITORE GIOCHI NELLA HOMEPAGE ---------- */
 .games-container{
     display: flex;
     flex-direction: row;
@@ -247,7 +240,6 @@ header{
     padding: 10px 5px;
 }
 
-
 .game-image {
     border-radius: 10px;
     position: relative;
@@ -255,7 +247,7 @@ header{
     height: 540px;
     overflow: hidden;
     padding: 5px;
-    transition: transform 0.3s ease; /* per l'animazione di ingrandimento */
+    transition: transform 0.3s ease; 
     cursor: pointer;
 }
 
@@ -263,8 +255,8 @@ header{
     border-radius: 10px;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* per ritagliare l'immagine in modo che riempia il contenitore */
-    transition: transform 0.3s ease; /* per l'animazione */
+    object-fit: cover; /*Ritaglia immagine per riempire il contenitore*/
+    transition: transform 0.3s ease;
 }
 
 .overlay {
@@ -273,7 +265,7 @@ header{
     position: absolute;
     padding: 20px;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* colore di sfondo trasparente */
+    background: rgba(0, 0, 0, 0.5); /* colore di sfondo, nero, trasparente */
     color: white;
     width: 100%;
     text-align: center;
@@ -293,6 +285,9 @@ label{
     font-size: 25px;
 }
 
+
+/* ---------- OVERLAY - COLLEZIONE ---------- */
+/* ---------- FILTRI ---------- */
 .filtraPer{
     font-size: 35px;
 }
@@ -302,7 +297,6 @@ label{
     flex-direction: row;
     padding-top: 20px;
     justify-content: space-evenly;
-
 }
 
 .filtriOverlay-container .filtriGioco a{
@@ -317,10 +311,10 @@ label{
 }
 
 .filtriGioco, .filtriGenere , .filtriPopolare{
-
     padding: 5px 40px;
 }
 
+/* ---------- BARRA DI RICERCA ---------- */
 .search-container {
     display: flex;
     flex-direction: row ;
@@ -352,8 +346,7 @@ label{
     background-color: white;
     color: black;
 }
-
-
+/* titolo pagina collezione "collezione delle ost" */
 .page-title {
     text-align: center;
     font-size: 40px;
@@ -361,10 +354,7 @@ label{
     color: white;
 }
 
-
-
-/* Style page content */
-
+/* ---------- GRIGLIA DEGLI ITEM ---------- */
 .collection-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -383,7 +373,7 @@ label{
 }
 
 .ost-item:hover .overlay {
-  display: block; /* il testo compare al passaggio del mouse */
+  display: block;
 
 }
 
@@ -417,93 +407,83 @@ a:hover{
     font-size: 13px;
     justify-content: center;
     text-justify: auto;
-
 }
 
-.home-seleziona{
-    font-size: 26px;
-    color: white;
-    text-align: center;
-    padding-top: 20px;
-}
-
+/* ---------- PULSANTE DEI FILTRI E RICERCA ---------- */
 #HoverButton a{
     z-index: 1;
     position: fixed; 
-    left: -66px; /* Position them outside of the screen */
-    transition: 0.3s; /* Add transition on hover */
+    left: -66px;
+    transition: 0.3s;
     margin-top: 10px;
-    padding: 15px; /* 15px padding */
-    width: 110px; /* Set a specific width */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Increase font size */
-    color: white; /* White text color */
+    padding: 15px;
+    width: 110px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
     background-color: black;
-    border-radius: 0 20px 20px 0; /* Rounded corners on the top right and bottom right side */
+    border-radius: 0 20px 20px 0;
     text-align: right;
 }
 
-
-
 #HoverButton a:hover {
-  left: 0; /* On mouse-over, make the elements appear as they should */
+    left: 0;
 }
 
 /
 #filtra {
-  top: 20px;
-  background-color: #white;
+    top: 20px;
+    background-color: white;
  }
 
 
-/* The Overlay (background) */
+/* ---------- OVERLAY (bg) ---------- */
 .sideOverlay {
-  height: 100%;
-  width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden; /* Disabilita scroll orizzontale */
+    transition: 0.5s;
 }
 
-/* Position the content inside the overlay */
+/* contenuto overlay (div), non il contenitore*/
 .overlay-content {
-  position: relative;
-  top: 15%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  color: white;
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
 }
 
-/* The navigation links inside the overlay */
+
 .sideOverlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sideOverlay a:hover, .overlay a:focus {
-  color: white;
+    color: white;
 }
 
-/* Position the close button (top right corner) */
+/* Bottone per chiudere */
 .sideOverlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
 }
 
+/* contenitore degli elementi nell'oevrlay*/
 .overlay-container{
-
     display: flex;
     flex-direction: column;
 }
@@ -514,112 +494,56 @@ a:hover{
 }
 .paginazione a {
     font-size: 40px;
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
 }
 
 .numero-pagina{
     color: white;
 }
+
 .paginazione a:hover {
     color: white;
 }
 
-.previous {
+.previous{
     background-color: #56220C;
     color: black;
     border-radius: 50%;
 }
 
-.next {
-background-color:  #56220C;
-color: black;
-border-radius: 50%;
+.next{
+    background-color:  #56220C;
+    color: black;
+    border-radius: 50%;
 }
 
+/* ---------- PULSANTE TORNA SU ---------- */
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: black; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 #myBtn:hover {
-  background-color: white; /* Add a dark-grey background on hover */
+  background-color: white;
   color: black;
 }
 
 
-
-@media (max-width: 768px) {
-
-    .navbar{
-        flex-direction: column;
-        padding-bottom: 10px;
-    }   
-
-    .navbar-left {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        font-size: 10px;
-    }
-
-    .login-container {
-        display: flex;
-        flex-direction: column ;
-        align-items: center;
-    }
-
-
-    .game-image {
-        position: relative;
-        width: 450px; 
-        height: 150px;
-        overflow: hidden;
-        padding: 5px;
-        transition: transform 0.3s ease; 
-    }
-
-    .games-container{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .filtriOverlay-container{
-        display: flex;
-        flex-direction: column;
-
-    .filtriGioco{
-        padding: 30px 0px;
-    }
-
-     .filtriGenere{
-        padding: 30px 0px;
-    }
-
-     .filtriPopolare{
-        padding: 30px 0px;
-    }
-
-}
-}
-
-/*-----CSS PAGINA INDIVIDUALE-----*/
-
-/* Style the list */
+/*----- PAGINA ITEM-----*/
+/*----- Briciole di pane-----*/
 ul.breadcrumb {
     float: left;
     padding: 10px 16px;
@@ -628,26 +552,24 @@ ul.breadcrumb {
     background-color: black;
 }
 
-/* Display list items side by side */
+/* Disponi elementi in fila - fianco a fianco */
 ul.breadcrumb li {
   display: inline;
   font-size: 18px;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
+/* Simbolo (/) tra gli elementi */
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: white;
   content: "/\00a0";
 }
 
-/* Add a color to all links inside the list */
 ul.breadcrumb li a {
   color: #823E21;
   text-decoration: none;
 }
 
-/* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
   color: white;
   text-decoration: underline;
@@ -663,9 +585,9 @@ ul.breadcrumb li a:hover {
 
 }
 
-
+/*----- CONTAINER MEDIA-----*/
 .media-container {
-    height: 90vh; /* Occupa l'80% dell'altezza dello schermo */
+    height: 90vh; /* Occupa l'90% dell'altezza dello schermo */
     margin-left: 7%;
     margin-right: 7%;
     margin-top: 10px;
@@ -676,15 +598,14 @@ ul.breadcrumb li a:hover {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    justify-content: space-evenly; /* Equal space top & bottom */
-    align-items: flex-start; /* Align items to the left */
-    padding-left: 20px; /* Left padding */
+    justify-content: space-evenly; /* Spazio equidistante sopra e sotto*/
+    align-items: flex-start; /* Allinea items a sinistra, inizio scatola */
+    padding-left: 20px;
 
 
 }
 
-
-
+/*----- ELEMENTI VIDEO E AUDIO-----*/
 video::-webkit-media-controls {
     display: none !important;  
 }
@@ -693,25 +614,23 @@ video::-webkit-media-controls {
     box-shadow: 5px 4px 6px #838E88;
 }
 
-
 audio::-webkit-media-controls-panel {
-    background-color: #838E88;  /* Colore di sfondo della barra di controllo */
+    background-color: #838E88;  
 }
 
 video, audio {
-    width: 55%; /* Occupa il 60% del contenitore */
+    width: 55%; 
     cursor: pointer;
     border-radius: 10px;
 }
 
+/*----- Container comunity-----*/
 .comunity{
     display: flex;
     flex-direction: row;
     margin: 10px;
     justify-content: space-evenly;
 }
-
-
 
 .fa {
   font-size: 25px;
@@ -745,37 +664,37 @@ video, audio {
     transition: bottom 0.5s ease-in-out; /* Animazione per far apparire la notifica */
 }
 
-/* Notifica che si muove verso l'alto */
+
 .notifica.show {
     bottom: 20px; /* Spostamento verso l'alto */
 }
 
 
-/* Aggiungi lo stile del bottone collapsible */
+
 .collapsible {
   background-color: #43484E;
   color: white;
   cursor: pointer;
   padding: 15px;
-  width: 60%; /* Larghezza relativa */
-  max-width: 1000px; /* Larghezza massima */
+  width: 60%; 
+  max-width: 1000px; 
   border: none;
   text-align: center;
   outline: none;
   font-size: 25px;
   font-weight: bold;
-  margin: 10px auto 0px auto; /* Centra il bottone orizzontalmente */
-  display: block;    /* Assicurati che il bottone sia un elemento di tipo blocco */
+  margin: 10px auto 0px auto; 
+  display: block;
 }
 
-/* Aggiungi un colore di sfondo quando viene cliccato o quando l'utente ci passa sopra */
+
 .attivo, .collapsible:hover {
   background-color: white;
   color: black;
 }
 
 .collapsible:after {
-  content: '\25B2'; /* Unicode character for "plus" sign (+) */
+  content: '\25B2'; /* Codice simbolo per espandere / rimpicciolire (freccia) */
   font-size: 26px;
   color: black;
   float: right;
@@ -783,32 +702,31 @@ video, audio {
 }
 
 .attivo:after {
-  content: "\25BC"; /* Unicode character for "minus" sign (-) */
+  content: "\25BC";
 }
 
-/* Style the collapsible content. Note: hidden by default */
+/* Contenuto collapsible */
 .contenuto-descrizione {
   padding: 0 18px;
   background-color: #838E88;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  width: 60%; /* Imposta anche qui la larghezza */
-  max-width: 1000px; /* Larghezza massima */
-  margin: 0 auto; /* Centra il contenuto orizzontalmente */
+  width: 60%;
+  max-width: 1000px;
+  margin: 0 auto;
   display: block;
 }
 
-/* Style for expanding content */
 .contenuto-descrizione.expanded {
-  max-height: 1200px; /* Assicurati che ci sia una massima altezza che consenta di visualizzare il contenuto */
+  max-height: 1200px;
   padding: 10px;
   font-weight: bold;
   margin-bottom: 15px;
   
 }
 
-/* Centra la descrizione */
+
 .descrizione {
     margin-top: 20px;
     font-size: 18px;
@@ -817,19 +735,18 @@ video, audio {
     align-items: center;
 }
 
-/* Stile della tabella metadata */
+/*tabella metadata */
 .metadata-table {
-  width: 100%;
-  border-collapse: collapse; /* Per evitare spazi tra le celle */
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
+    width: 100%;
+    border-collapse: collapse; /*rimuovi spazi tra le celle */
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* Stile delle righe della tabella */
 .metadata-table td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd; /* Aggiunge una linea di separazione tra le righe */
+    padding: 8px;
+    border-bottom: 1px solid #ddd; 
 }
 
 /* Zebra-striped table */
@@ -843,12 +760,213 @@ video, audio {
   color: white;
 }
 
-/* Rende il testo delle etichette in grassetto */
 .metadata-table td strong {
   font-weight: bold;
 }
 
 
+/* ----- FOOTER ----- */
+.footer-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: black;
+    font-weight: bold;
+    gap: 20px;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right,black, #838E88, black) ;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.link-social{
+    display: flex; 
+}
+
+.nome-social{
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+footer .fa {
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+.fa-facebook:hover {
+    color: #1877F2;
+}
+.fa-youtube:hover {
+    color: #CD201F;
+}
+.fa-twitter:hover {
+    color: #1DA1F2;
+}
+.fa-instagram:hover {
+    color:  #c13584;
+}
+
+.fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
+    color: white;
+}
+
+.contatti{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, black,#838E88, black) ;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.link-contatti{
+    display: flex; 
+    font-size: 20px;
+    gap: 15px;
+}
+
+.altri-link{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right,black, #838E88, black) ;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.project-link{
+     text-decoration: none;
+     color: black;
+}
+
+.project-link:hover{
+    color: #823E21;
+}
+
+/* ---------- PROJECT PLAN ---------- */
+#pagina-plan{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 15%;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+#sidenav-plan {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+#sidenav-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidenav-plan a {
+    display: block;
+    margin-top: 10px;
+    padding: 12px;
+    width: 120px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    background-color: #322E2D;
+    border: solid black 2px;
+    border-radius: 0 20px 20px 0;
+    text-align: right;
+    padding-right: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#sidenav-plan a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+h2{
+    margin-top: 60px;
+    color:#823E21;
+}
+
+h3{
+    margin-top: 40px;
+    color: #56220C;
+
+}
+
+h3 a{
+    text-decoration: none;
+    color: #823E21;
+}
+
+p a{
+    text-decoration: none;
+    color: #823E21;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #838E88;
+}
+
+.layout-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne uguali */
+    justify-items: center; /* Orizzontalmente */
+    align-items: center; /* Verticalmente */
+    gap: 10px;
+}
+
+.layout-images label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+#struttura img{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.layout-images img {
+    max-width: 100%; /* Contenuto scala col contenitore */
+    height: auto; /* Mantiene l'aspetto */
+    border: 1px solid black;
+    border-radius: 8px;
+}
 
 
 /*-----MEDIA QUERY-----*/
@@ -903,130 +1021,86 @@ video, audio {
     flex-wrap: wrap;
 }
 
-
 #sidenav-plan a {
     z-index: 1;
     position: relative; 
     display: block;
-    left: -66px; /* Position them outside of the screen */
-    transition: 0.3s; /* Add transition on hover */
-    padding: 15px; /* 15px padding */
-    width: 110px; /* Set a specific width */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Increase font size */
-    color: white; /* White text color */
+    left: -66px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 110px; 
+    text-decoration: none;
+    font-size: 20px;
+    color: white; 
     background-color: black;
-    border-radius: 0 20px 20px 0; /* Rounded corners on the top right and bottom right side */
+    border-radius: 0 20px 20px 0;
     text-align: right;
 }
-
-
-
 
 #sidenav-plan a:hover {
     left: 0;
     }
-
-
 }
 
 
+@media (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        padding-bottom: 10px;
+    }   
+
+    .navbar-left {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+    }
 
 
-/* ----- FOOTER ----- */
-.footer-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    color: black;
-    font-weight: bold;
-    gap: 20px;
-}
+    .game-image {
+        position: relative;
+        width: 450px; 
+        height: 150px;
+        overflow: hidden;
+        padding: 5px;
+        transition: transform 0.3s ease; 
+    }
 
-.social{
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right,black, #838E88, black) ;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-}
+    .games-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 
-.link-social{
-    display: flex; 
-}
+    .filtriOverlay-container{
+        display: flex;
+        flex-direction: column;
+    }
 
-.nome-social{
-    padding-top: 5px;
-    font-size: 20px;
-}
+    .filtriGioco{
+        padding: 30px 0px;
+    }
 
-footer .fa {
-    font-size: 30px;
-    width: 50px;
-    text-decoration: none;
-    text-align: left;
-}
+     .filtriGenere{
+        padding: 30px 0px;
+    }
 
-
-.fa-facebook:hover {
-  color: #1877F2;
+     .filtriPopolare{
+        padding: 30px 0px;
+    }
 }
-.fa-youtube:hover {
-  color: #CD201F;
-}
-.fa-twitter:hover {
-  color: #1DA1F2;
-}
-.fa-instagram:hover {
-  color:  #c13584;
-}
-
-.fa-facebook, .fa-twitter, .fa-youtube, .fa-instagram {
-  color: white;
-}
-
-.contatti{
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right, black,#838E88, black) ;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-.link-contatti{
-    display: flex; 
-    font-size: 20px;
-    gap: 15px;
-}
-
-.altri-link{
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right,black, #838E88, black) ;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-.project-link{
-     text-decoration: none;
-     color: black;
-}
-
-.project-link:hover{
-    color: #823E21;
-}
-
-/* ----- MEDIA QUERY ----- */
 
 @media (min-width: 1200px) {
   .game-image {
     width: calc(100% / 7); /* Aumenta la larghezza delle immagini per riempire lo spazio disponibile */
-    height: auto; /* Altezza automatica per mantenere il ratio */
+    height: auto; 
   }
 }
 
@@ -1077,8 +1151,7 @@ footer .fa {
     video, audio {
         width: 100%;
         border-radius: 10px;
-        padding: 1%;
-          
+        padding: 1%;      
     }
 
     ::-webkit-scrollbar {
@@ -1086,7 +1159,7 @@ footer .fa {
     }
 
     .collapsible, .contenuto-descrizione {
-    width: 80%; /* Aumenta la larghezza al 80% su schermi più piccoli */
+    width: 80%; 
     }
 
     .footer-container {
@@ -1100,159 +1173,34 @@ footer .fa {
     }
 
 
-.collab{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    flex-wrap: wrap;   
-}
-
-
-#sidenav-plan a {
-    z-index: 1;
-    position: relative; 
-    display: block;
-    left: -66px; /* Position them outside of the screen */
-    transition: 0.3s; /* Add transition on hover */
-    padding: 15px; /* 15px padding */
-    width: 110px; /* Set a specific width */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Increase font size */
-    color: white; /* White text color */
-    background-color: black;
-    border-radius: 0 20px 20px 0; /* Rounded corners on the top right and bottom right side */
-    text-align: right;
-}
-
-
-
-
-#sidenav-plan a:hover {
-    left: 0;
+    .collab{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex-wrap: wrap;   
     }
 
+    #sidenav-plan a {
+        z-index: 1;
+        position: relative; 
+        display: block;
+        left: -66px; /* Position them outside of the screen */
+        transition: 0.3s; /* Add transition on hover */
+        padding: 15px; /* 15px padding */
+        width: 110px; /* Set a specific width */
+        text-decoration: none; /* Remove underline */
+        font-size: 20px; /* Increase font size */
+        color: white; /* White text color */
+        background-color: black;
+        border-radius: 0 20px 20px 0; /* Rounded corners on the top right and bottom right side */
+        text-align: right;
+    }
 
-}
+    #sidenav-plan a:hover {
+        left: 0;
+    }
 
-/* ------ PROJECT PLAN ------ */
-/*
-#838E88 (grigio chiaro)
-#43484E (grigio medio)
-#322E2D (grigio scuro)
-#56220C (rosso-mattone)
-#823E21
-*/
-
-
-
-
-
-#pagina-plan{
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-inline: 15%;
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-
-#sidenav-plan {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-}
-
-#sidenav-plan ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#sidenav-plan a {
-    display: block;
-    margin-top: 10px;
-    padding: 12px;
-    width: 120px;
-    text-decoration: none;
-    font-size: 15px;
-    color: white;
-    background-color: #322E2D;
-    border: solid black 2px;
-    border-radius: 0 20px 20px 0;
-    text-align: right;
-    padding-right: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-
-#sidenav-plan a:hover {
-    background-color: white;
-    color: black;
-}
-
-
-
-h2{
-    margin-top: 60px;
-    color:#823E21;
-}
-
-h3{
-    margin-top: 40px;
-    color: #56220C;
-
-}
-
-h3 a{
-    text-decoration: none;
-    color: #823E21;
-}
-
-p a{
-    text-decoration: none;
-    color: #823E21;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #838E88;
-}
-
-.layout-images{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-    justify-items: center; /* Centers items horizontally */
-    align-items: center; /* Aligns items vertically */
-    gap: 10px;
-}
-
-.layout-images label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-}
-
-.layout-images img {
-    max-width: 100%; /* Ensures images scale within their container */
-    height: auto; /* Maintains aspect ratio */
-    border: 1px solid #ccc; /* Optional: Adds a subtle border */
-    border-radius: 8px; /* Optional: Rounded corners */
+    .sideOverlay {
+        background-color: rgb(0,0,0);
+    }
 }

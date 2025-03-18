@@ -27,11 +27,9 @@
 <body>
 
 	<header>
-
 	   	<div class="header-container">
 	   		<a href="index.html"><img src="IMG/Logo.png" width="200" height="100"></a>
         </div>
-
         <div class="navbar">
         	<div class="navbar-left">
             	<a href="index.html">Home</a>
@@ -46,14 +44,15 @@
     			</form>
   			</div>
         </div>
-         <ul class="breadcrumb">
-		  <li><a href="index.html">Home</a></li>
-		  <li><a href="collezione.html">Collezione</a></li>
-		  <li><a href="#">Dark Souls III</a></li>
-		  <li>Pontiff Sulyvahn</li>
+        <ul class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="collezione.html">Collezione</a></li>
+			<li><a href="#">Dark Souls III</a></li>
+			<li>Pontiff Sulyvahn</li>
 		</ul>
     </header>
 
+     <!---------- MAIN: Container dell'item, video e audio, ed informazioni----------->
     <main>
     	
     	<h1 class="titolo-brano"> Pontyff Sulyvahn</h1>
@@ -203,56 +202,43 @@
 		</div>
 	</footer>
 	<script>
+	/*---------- FUNZIONI SUL VIDEO E AUDIO ---------- */
         const video = document.getElementById('videoPlayer');
-
-        // Aggiungi l'evento di click per mettere in pausa o riprendere il video
         video.addEventListener('click', function() {
             if (video.paused) {
-                video.play();  // Se il video è in pausa, lo avvia
+                video.play();
             } else {
-                video.pause();  // Se il video sta suonando, lo mette in pausa
+                video.pause();
             }
         });
 
+    /*---------- FUNZIONI VOTO E PREFERENZA E RELATIVE NOTIFICHE ---------- */
         const voteStars = document.getElementById('votaStelle');
 		const notification = document.getElementById('notificaLogin');
-		
-
-		// Aggiungi l'evento di click sul div delle stelle
 		voteStars.addEventListener('click', function() {
 		    // Mostra la notifica
 		    notification.classList.add('show');
-		    
-		    // Rimuovi la notifica dopo 3 secondi (puoi cambiare questo valore)
 		    setTimeout(function() {
 		        notification.classList.remove('show');
-		    }, 3000);  // 3000 millisecondi = 3 secondi
+		    }, 3000);
 		});
 
 		const voteFav = document.getElementById('aggiungiPreferito');
 		const notification_2 = document.getElementById('notificaLogin-2');
 		voteFav.addEventListener('click', function() {
-		    // Mostra la notifica
 		    notification_2.classList.add('show');
-		    
-		    // Rimuovi la notifica dopo 3 secondi (puoi cambiare questo valore)
 		    setTimeout(function() {
 		        notification_2.classList.remove('show');
-		    }, 3000);  // 3000 millisecondi = 3 secondi
+		    }, 3000);
 		});
 
-
-
-
+	/*---------- FUNZIONI COLLAPSIBLE / ACCORDION ---------- */
 		var coll = document.getElementsByClassName("collapsible");
 		var i;
-
 		for (i = 0; i < coll.length; i++) {
 		  coll[i].addEventListener("click", function() {
 		    this.classList.toggle("attivo");
 		    var content = this.nextElementSibling;
-
-		    // Aggiungi o rimuovi la classe 'expanded' per controllare la visibilità
 		    if (content.classList.contains("expanded")) {
 		      content.classList.remove("expanded");
 		    } else {

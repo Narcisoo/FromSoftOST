@@ -25,13 +25,10 @@
 	</style>
 </head>
 <body>
-
 	<header>
-
 	   	<div class="header-container">
 	   		<a href="index.html"><img src="IMG/Logo.png" width="200" height="100"></a>
         </div>
-
         <div class="navbar">
         	<div class="navbar-left">
             	<a href="index.html">Home</a>
@@ -46,18 +43,19 @@
     			</form>
   			</div>
         </div>
-         <ul class="breadcrumb">
-		  <li><a href="index.html">Home</a></li>
-		  <li><a href="collezione.html">Collezione</a></li>
-		  <li><a href="#">Dark Souls I</a></li>
-		  <li>Knight Artorias</li>
+        <!-- Briciole di pane -->
+        <ul class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="collezione.html">Collezione</a></li>
+			<li><a href="#">Dark Souls I</a></li>
+			<li>Knight Artorias</li>
 		</ul>
-
     </header>
 
+    <!---------- MAIN: Container dell'item, video e audio, ed informazioni----------->
     <main>
-    	
     	<h1 class="titolo-brano"> Knight Artorias</h1>
+    	<!-- Contenitore dei media -->
     	<div class="media-container">
     		<video id="videoPlayer" loop muted>
     			<source src="VID/artorias.mp4" type="video/mp4">
@@ -67,24 +65,30 @@
     			<source src="MP3/Artorias.mp3" type="audio/mpeg">
     		</audio>
     	</div>
+
+    	<!-- Contenitore delle funzioni comunity -->
     	<div class="comunity">
-    	<div id="votaStelle" class="comunity-vote" >
-    		<span class="fa fa-star checked"></span>
-			<span class="fa fa-star unchecked"></span>
-			<span class="fa fa-star unchecked"></span>
-			<span class="fa fa-star unchecked"></span>
-			<span class="fa fa-star unchecked"></span>
+	    	<div id="votaStelle" class="comunity-vote" >
+	    		<span class="fa fa-star checked"></span>
+				<span class="fa fa-star unchecked"></span>
+				<span class="fa fa-star unchecked"></span>
+				<span class="fa fa-star unchecked"></span>
+				<span class="fa fa-star unchecked"></span>
+	    	</div>
+	    	<div id="aggiungiPreferito" class="comunity-vote">
+	    		<span class="fa fa-heart unchecked"></span>
+	    	</div>
     	</div>
-    	<div id="aggiungiPreferito" class="comunity-vote">
-    		<span class="fa fa-heart unchecked"></span>
-    	</div>
-    	</div>
+
+    	<!-- Notifiche -->
 	    <div id="notificaLogin" class="notifica">
 	    	<p>Devi fare il login per votare !</p>
 		</div>
 		<div id="notificaLogin-2" class="notifica">
 	    	<p>Devi fare il login per poter aggiungere il brano ai preferiti !</p>
 		</div>
+
+		<!-- Contenitori descrizioni e dati, collapsible -->
     	<div class="descrizione">
     		<button type="button" class="collapsible">DESCRIZIONE</button>
 			<div class="contenuto-descrizione">
@@ -194,60 +198,69 @@
 		</div>
 	</footer>
 	<script>
+	/*---------- FUNZIONI SUL VIDEO E AUDIO ---------- */
+		// Seleziona l'elemento video tramite il suo id
         const video = document.getElementById('videoPlayer');
 
-        // Aggiungi l'evento di click per mettere in pausa o riprendere il video
+        // Aggiungi un Event Listener per il click sul video
         video.addEventListener('click', function() {
+        	// Quando l'utente clicca sul video, controlla se è in pausa o in riproduzione
             if (video.paused) {
-                video.play();  // Se il video è in pausa, lo avvia
+            	// Se il video è in pausa, lo avvia
+            	video.play();  
             } else {
-                video.pause();  // Se il video sta suonando, lo mette in pausa
+            	// Se il video sta andando, lo mette in pausa
+                video.pause();  
             }
         });
 
+    /*---------- FUNZIONI VOTO E PREFERENZA E RELATIVE NOTIFICHE ---------- */
+        // Seleziona l'elemento delle stelle di voto tramite l'id
         const voteStars = document.getElementById('votaStelle');
+        // Seleziona l'elemento della notifica tramite l'id 'notificaLogin'
 		const notification = document.getElementById('notificaLogin');
 		
 
-		// Aggiungi l'evento di click sul div delle stelle
+		// Aggiungi un Event Listener per il click sul Div delle stelle
 		voteStars.addEventListener('click', function() {
-		    // Mostra la notifica
+		    // Mostra la notifica (aggiungendo la classe 'show')
 		    notification.classList.add('show');
-		    
-		    // Rimuovi la notifica dopo 3 secondi (puoi cambiare questo valore)
+
+		    // Rimuovi la notifica dopo 3 secondi
 		    setTimeout(function() {
-		        notification.classList.remove('show');
-		    }, 3000);  // 3000 millisecondi = 3 secondi
+		    	notification.classList.remove('show');
+		    }, 3000);
 		});
 
 		const voteFav = document.getElementById('aggiungiPreferito');
 		const notification_2 = document.getElementById('notificaLogin-2');
 		voteFav.addEventListener('click', function() {
-		    // Mostra la notifica
-		    notification_2.classList.add('show');
-		    
-		    // Rimuovi la notifica dopo 3 secondi (puoi cambiare questo valore)
+		    notification_2.classList.add('show');	    
 		    setTimeout(function() {
 		        notification_2.classList.remove('show');
-		    }, 3000);  // 3000 millisecondi = 3 secondi
+		    }, 3000);  
 		});
 
-
-
-
+	/*---------- FUNZIONI COLLAPSIBLE / ACCORDION ---------- */
+		// Seleziona tutti gli elementi con la classe 'collapsible'
 		var coll = document.getElementsByClassName("collapsible");
 		var i;
 
+		// Cicla su tutti gli elementi con la classe 'collapsible' e aggiunge Event Listener per il click
 		for (i = 0; i < coll.length; i++) {
 		  coll[i].addEventListener("click", function() {
+		  	// Aggiungi o rimuovi la classe 'attivo' all'elemento cliccato
 		    this.classList.toggle("attivo");
+		    // Seleziona l'elemento successivo a quello cliccato (quello che si vuole espandere o comprimere)
 		    var content = this.nextElementSibling;
 
-		    // Aggiungi o rimuovi la classe 'expanded' per controllare la visibilità
+		     // Controlla se l'elemento contenente il contenuto espandibile ha la classe 'expanded'
 		    if (content.classList.contains("expanded")) {
-		      content.classList.remove("expanded");
+		    	// Se è espanso, lo nasconde
+		    	content.classList.remove("expanded");
 		    } else {
-		      content.classList.add("expanded");
+		   		// Se non è espanso, lo mostra
+		    	content.classList.add("expanded");
 		    }
 		  });
 		}
